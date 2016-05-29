@@ -7,3 +7,5 @@ php:
   - hhvm
   - nightly
 script: phpunit tests/
+before_script:
+  - composer install --dev
