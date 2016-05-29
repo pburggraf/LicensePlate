@@ -5,7 +5,7 @@ namespace PB\LicensePlate\Test\Detector;
 use PB\LicensePlate\Detector\AbstractDetector;
 use PB\LicensePlate\Detector\GermanyDetector;
 
-require_once __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__ . '/../../vendor/autoload.php';
 
 class GermanyDetectorTest extends \PHPUnit_Framework_TestCase
 {

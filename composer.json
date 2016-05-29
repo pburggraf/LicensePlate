@@ -1,7 +1,6 @@
 {
-  "name": "pb/licensePlate",
-  "description": "detect license plates",
-  "minimum-stability": "dev",
+  "name": "pb/licenseplate",
+  "description": "Validate license plates",
   "license": "MIT",
   "authors": [
     {
@@ -11,9 +10,16 @@
   ],
   "autoload": {
     "psr-4": {
-      "PB\\LicensePlate\\": "src/",
-      "PB\\LicensePlate\\Test\\": "tests/"
+      "PB\\LicensePlate\\": "src/PBLicensePlate/"
     }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "PB\\LicensePlate\\Test\\": "tests/PBLicensePlate/"
+    }
+  },
+  "require": {
+    "php": ">=5.5.0"
   },
   "require-dev": {
     "phpunit/phpunit": "^5.3"

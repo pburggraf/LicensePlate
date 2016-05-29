@@ -2,8 +2,6 @@
 
 namespace PB\LicensePlate;
 
-use PB\LicensePlate\Detector\DetectorInterface;
-
 /**
  * @author Philip Burggraf <philip@pburggraf.de>
  */
@@ -11,12 +9,13 @@ class LicensePlateFactory
 {
     /**
      * @param string $licensePlate
-     * @param DetectorInterface $detector
      *
-     * @return array
+     * @return bool
      */
-    public static function fromString($licensePlate, DetectorInterface $detector)
+    public static function fromString($licensePlate)
     {
+        $detector = new Detector\GermanyDetector();
+
         $result = $detector->validate($licensePlate);
 
         return $result;
