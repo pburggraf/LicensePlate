@@ -2,18 +2,22 @@
 
 namespace PB\LicensePlate;
 
+use PB\LicensePlate\Detector\AbstractDetector;
+
 /**
  * @author Philip Burggraf <philip@pburggraf.de>
  */
 class LicensePlateFactory
 {
     /**
-     * @param $licensePlate
-     * @return Response\LicensePlateResponse
+     * @param string $licensePlate
+     * @param string $detectorType
+     * @return
      */
-    public static function fromString($licensePlate)
+    public static function fromString($licensePlate, $detectorType)
     {
-        $detector = new Detector\GermanyDetector($licensePlate);
+        /** @var AbstractDetector $detector */
+        $detector = new $detectorType($licensePlate);
 
         return $detector->getResponse();
     }

@@ -230,7 +230,7 @@ class GermanyDetectorTest extends \PHPUnit_Framework_TestCase
     public function testValidate()
     {
         foreach ($this->plateTests as $plate => $result) {
-            $validationResult = LicensePlateFactory::fromString($plate)->isValid();
+            $validationResult = LicensePlateFactory::fromString($plate, GermanyDetector::class)->isValid();
             $this->assertEquals($result['valid'], $validationResult);
         }
     }
@@ -238,7 +238,7 @@ class GermanyDetectorTest extends \PHPUnit_Framework_TestCase
     public function testType()
     {
         foreach ($this->plateTests as $plate => $result) {
-            $typeResult = LicensePlateFactory::fromString($plate)->getType();
+            $typeResult = LicensePlateFactory::fromString($plate, GermanyDetector::class)->getType();
             $this->assertEquals($result['type'], $typeResult);
         }
     }
