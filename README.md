@@ -1,4 +1,4 @@
-LicensePlate [![Build Status](https://travis-ci.org/pburggraf/LicensePlate.svg?branch=master)](https://travis-ci.org/pburggraf/PBLicensePlate)
+LicensePlate [![Build Status](https://travis-ci.org/pburggraf/LicensePlate.svg?branch=master)](https://travis-ci.org/pburggraf/LicensePlate)
 ===
 
 Easily validate license plates and get some information (planned feature).
