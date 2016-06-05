@@ -1,6 +1,7 @@
 <?php
 
 namespace PB\LicensePlate\Detector;
+
 use PB\LicensePlate\Response\LicensePlateResponse;
 
 /**
@@ -8,6 +9,16 @@ use PB\LicensePlate\Response\LicensePlateResponse;
  */
 class GermanyDetector extends AbstractDetector
 {
+    const PLATE_TYPE_DEFAULT = 1;
+    const PLATE_TYPE_GOVERNMENT = 2;
+    const PLATE_TYPE_DIPLOMATIC_CORPS = 3;
+    const PLATE_TYPE_FEDERAL = 4;
+    const PLATE_TYPE_LOCAL_POLICE = 5;
+    const PLATE_TYPE_MILITARY = 6;
+
+    /**
+     * @var array
+     */
     protected $validDistricts = array(
         'AA' => array(),
         'ABG' => array(),
@@ -685,68 +696,59 @@ class GermanyDetector extends AbstractDetector
         'Z' => array(),
         'ÖHR' => array(),
     );
-
+    
     /**
-     * @param string $licensePlate
-     *
-     * @return bool
-     */
-    public function validate($licensePlate)
-    {
-        return $this->details($licensePlate)->isValid();
-    }
-
-    /**
-     * @param string $licensePlate
-     * 
      * @return LicensePlateResponse
      */
-    public function details($licensePlate)
+    public function parse()
     {
-        $licensePlate = $this->normalize($licensePlate);
-        
-        $response = new LicensePlateResponse($licensePlate);
-
         // match default plate layout (inclusive historic)
-        if (preg_match('/^[A-ZÄÖÜ]{1,3} [A-Z]{1,2} [0-9]{1,4}[H]?$/', $licensePlate) === 1) {
-            $plateParts = $this->seperate($licensePlate);
+        if (preg_match('/^[A-ZÄÖÜ]{1,3} [A-Z]{1,2} [0-9]{1,4}[H]?$/', $this->normalizedLicensePlate) === 1) {
+            $plateParts = $this->seperatedLicensePlate;
 
             // check if the frist block is a valid german district
-            if (array_key_exists($plateParts[0], $this->validDistricts)){
-                $response->setIsValid(true);
+            if (array_key_exists($plateParts[0], $this->validDistricts)) {
+                $this->response->setValid(true);
+                $this->response->setType(self::PLATE_TYPE_DEFAULT);
 
                 // it is not possible to have 3 characters in the first block combined with 2 characters and 4 numbers
                 if (strlen($plateParts[0]) == 3 && strlen($plateParts[1]) == 2 && strlen($plateParts[2]) > 3) {
-                    $response->setIsValid(false);
+                    $this->response->setValid(false);
+                    $this->response->setType(self::PLATE_TYPE_UNKNOWN);
                 }
             }
         }
 
         // match gov. plate layout
-        if (preg_match('/^[0-9]{1,2} [0-9]{1,2}$/', $licensePlate) === 1) {
-            $response->setIsValid(true);
+        if (preg_match('/^[0-9]{1,2} [0-9]{1,2}$/', $this->normalizedLicensePlate) === 1) {
+            $this->response->setValid(true);
+            $this->response->setType(self::PLATE_TYPE_GOVERNMENT);
         }
 
         // match plates of the diplomatic corps
-        if (preg_match('/^(?:(?:0|B|BN) [0-9]{2,3} [0-9]{1,3}[A-Z]?|[A-Z]{1,3} 9[0-9]{2,4}[A-Z]?)$/', $licensePlate) === 1) {
-            $response->setIsValid(true);
+        if (preg_match('/^(?:(?:0|B|BN) [0-9]{2,3} [0-9]{1,3}[A-Z]?|[A-Z]{1,3} 9[0-9]{2,4}[A-Z]?)$/', $this->normalizedLicensePlate) === 1) {
+            $this->response->setValid(true);
+            $this->response->setType(self::PLATE_TYPE_DIPLOMATIC_CORPS);
         }
 
         // match fed. plate layout
-        if (preg_match('/^B[P|D|W] [0-9]{1,2} [0-9]{1,4}$/', $licensePlate) === 1) {
-            $response->setIsValid(true);
+        if (preg_match('/^B[P|D|W] [0-9]{1,2} [0-9]{1,4}$/', $this->normalizedLicensePlate) === 1) {
+            $this->response->setValid(true);
+            $this->response->setType(self::PLATE_TYPE_FEDERAL);
         }
 
         // match local police cars
-        if (preg_match('/^(?:(?:NRW|BWL|BBL|RPL|SAL) (?:[4-6]{1}? )[0-9]{1,4}|(?:B|LSA|SH) [0-9]{1,5}|(?:HB|HH) [0-9]{1,4}|MVL 3[0-9]{1,4}|(?:WI HP|DD Q|EF LP) [0-9]{1,4})$/', $licensePlate) === 1) {
-            $response->setIsValid(true);
+        if (preg_match('/^(?:(?:NRW|BWL|BBL|RPL|SAL) (?:[4-6]{1}? )[0-9]{1,4}|(?:B|LSA|SH) [0-9]{1,5}|(?:HB|HH) [0-9]{1,4}|MVL 3[0-9]{1,4}|(?:WI HP|DD Q|EF LP) [0-9]{1,4})$/', $this->normalizedLicensePlate) === 1) {
+            $this->response->setValid(true);
+            $this->response->setType(self::PLATE_TYPE_LOCAL_POLICE);
         }
 
         // match military plate layout
-        if (preg_match('/^Y (?:[0-9]{1,4} [0-9]{1,4}|[0-9]{1,6})$/', $licensePlate) === 1) {
-            $response->setIsValid(true);
+        if (preg_match('/^Y (?:[0-9]{1,4} [0-9]{1,4}|[0-9]{1,6})$/', $this->normalizedLicensePlate) === 1) {
+            $this->response->setValid(true);
+            $this->response->setType(self::PLATE_TYPE_MILITARY);
         }
-        
-        return $response;
+
+        return $this->response;
     }
 }

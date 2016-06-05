@@ -8,16 +8,13 @@ namespace PB\LicensePlate;
 class LicensePlateFactory
 {
     /**
-     * @param string $licensePlate
-     *
-     * @return bool
+     * @param $licensePlate
+     * @return Response\LicensePlateResponse
      */
     public static function fromString($licensePlate)
     {
-        $detector = new Detector\GermanyDetector();
+        $detector = new Detector\GermanyDetector($licensePlate);
 
-        $result = $detector->validate($licensePlate);
-
-        return $result;
+        return $detector->getResponse();
     }
 }

@@ -10,12 +10,12 @@ class LicensePlateResponse
     /**
      * @var string
      */
-    protected $normalizedLicensePlate;
+    protected $licensePlate;
 
     /**
      * @var bool
      */
-    protected $isValid;
+    protected $valid;
 
     /**
      * @var string[]
@@ -23,29 +23,41 @@ class LicensePlateResponse
     protected $details;
 
     /**
-     * @param $normalizedLicensePlate
+     * @var string
      */
-    public function __construct($normalizedLicensePlate)
+    protected $country;
+
+    /**
+     * @var int
+     */
+    protected $type;
+
+    /**
+     * @param $licensePlate
+     */
+    public function __construct($licensePlate)
     {
-        $this->normalizedLicensePlate = '';
-        $this->isValid = false;
+        $this->licensePlate = $licensePlate;
+        $this->valid = false;
         $this->details = array();
+        $this->country = '';
+        $this->type = 0;
     }
 
     /**
      * @return string
      */
-    public function getNormalizedLicensePlate()
+    public function getLicensePlate()
     {
-        return $this->normalizedLicensePlate;
+        return $this->licensePlate;
     }
 
     /**
-     * @param string $normalizedLicensePlate
+     * @param string $licensePlate
      */
-    public function setNormalizedLicensePlate($normalizedLicensePlate)
+    public function setLicensePlate($licensePlate)
     {
-        $this->normalizedLicensePlate = $normalizedLicensePlate;
+        $this->licensePlate = $licensePlate;
     }
 
     /**
@@ -53,15 +65,15 @@ class LicensePlateResponse
      */
     public function isValid()
     {
-        return $this->isValid;
+        return $this->valid;
     }
 
     /**
-     * @param boolean $isValid
+     * @param boolean $valid
      */
-    public function setIsValid($isValid)
+    public function setValid($valid)
     {
-        $this->isValid = $isValid;
+        $this->valid = $valid;
     }
 
     /**
@@ -88,5 +100,35 @@ class LicensePlateResponse
         $this->details[] = $detail;
     }
 
+    /**
+     * @return string
+     */
+    public function getCountry()
+    {
+        return $this->country;
+    }
 
+    /**
+     * @param string $country
+     */
+    public function setCountry($country)
+    {
+        $this->country = $country;
+    }
+
+    /**
+     * @return int
+     */
+    public function getType()
+    {
+        return $this->type;
+    }
+
+    /**
+     * @param int $type
+     */
+    public function setType($type)
+    {
+        $this->type = $type;
+    }
 }
