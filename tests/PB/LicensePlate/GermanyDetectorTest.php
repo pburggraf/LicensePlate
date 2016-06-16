@@ -9,7 +9,7 @@ require_once __DIR__ . '/../../../vendor/autoload.php';
 
 class GermanyDetectorTest extends \PHPUnit_Framework_TestCase
 {
-    protected $plateTests = array(
+    protected static $plateTests = array(
         'A A 1' => array(
             'valid' => true,
             'type' => GermanyDetector::PLATE_TYPE_DEFAULT,
@@ -229,17 +229,17 @@ class GermanyDetectorTest extends \PHPUnit_Framework_TestCase
 
     public function testValidate()
     {
-        foreach ($this->plateTests as $plate => $result) {
+        foreach (self::$plateTests as $plate => $result) {
             $validationResult = LicensePlateFactory::fromString($plate, GermanyDetector::class)->isValid();
-            $this->assertEquals($result['valid'], $validationResult);
+            self::assertEquals($result['valid'], $validationResult);
         }
     }
 
     public function testType()
     {
-        foreach ($this->plateTests as $plate => $result) {
+        foreach (self::$plateTests as $plate => $result) {
             $typeResult = LicensePlateFactory::fromString($plate, GermanyDetector::class)->getType();
-            $this->assertEquals($result['type'], $typeResult);
+            self::assertEquals($result['type'], $typeResult);
         }
     }
 }
