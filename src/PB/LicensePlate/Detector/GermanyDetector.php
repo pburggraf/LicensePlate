@@ -277,7 +277,7 @@ class GermanyDetector extends AbstractDetector
             'Stadt Cottbus' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
         'CE' => array(
-            '	Landkreis Celle' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Landkreis Celle' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
         'CHA' => array(
             'Landkreis Cham' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
@@ -311,89 +311,91 @@ class GermanyDetector extends AbstractDetector
         ),
 
         'DAH' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Landkreis Dachau' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
         'DAN' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Landkreis Lüchow-Dannenberg' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
         'DAU' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Landkreis Vulkaneifel' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
         'DA' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Stadt Darmstadt / Landkreis Darmstadt-Dieburg' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
         'DBR' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Landkreis Rostock' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
         'DD' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Dresden' => '^(?:[A-P|R-Z]{1,2} [1-9][0-9]{0,3}|Q [1-9][0-9]{0,2})$',
+            'Polizei Sachsen' => '^Q [1-9][0-9]{3}$',
         ),
         'DEG' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Landkreis Deggendorf' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
         'DEL' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Stadt Delmenhorst' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
         'DE' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Stadt Dessau-Roßlau' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
         'DGF' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Landkreis Dingolfing-Landau' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
         'DH' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Landkreis Diepholz' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
         'DIL' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Lahn-Dill-Kreis' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
         'DIN' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Kreis Wesel' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
         'DIZ' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Rhein-Lahn-Kreis' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
         'DI' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Landkreis Darmstadt-Dieburg' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
         'DKB' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Landkreis Ansbach' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
         'DLG' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Landkreis Dillingen an der Donau' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
         'DL' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Landkreis Mittelsachsen' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
         'DM' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Landkreis Mecklenburgische Seenplatte' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
         'DN' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Kreis Düren' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
         'DON' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Landkreis Donau-Ries' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
         'DO' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Stadt Dortmund' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
         'DUD' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Landkreis Göttingen' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
         'DU' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Stadt Duisburg' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
         'DW' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Landkreis Sächsische Schweiz-Osterzgebirge' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
         'DZ' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Landkreis Nordsachsen' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
         'DÜW' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Landkreis Bad Dürkheim' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
         'D' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Stadt Düsseldorf' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
+
         'EA' => array(
             '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
