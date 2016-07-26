@@ -497,83 +497,85 @@ class GermanyDetector extends AbstractDetector
         ),
         
         'FB' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Wetteraukreis' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
         'FDB' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Landkreis Aichach-Friedberg' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
         'FDS' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Landkreis Freudenstadt' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
         'FD' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Landkreis Fulda' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
         'FEU' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Landkreis Ansbach' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
         'FFB' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Landkreis Fürstenfeldbruck' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
         'FF' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Stadt Frankfurt (Oder)' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
         'FG' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Landkreis Mittelsachsen' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
         'FI' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Landkreis Elbe-Elster' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
         'FKB' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Landkreis Waldeck-Frankenberg' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
         'FLÖ' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Landkreis Mittelsachsen' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
         'FL' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Stadt Flensburg' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
         'FN' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Bodenseekreis' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
         'FOR' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Landkreis Spree-Neiße' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
         'FO' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Landkreis Forchheim' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
         'FRG' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Landkreis Freyung-Grafenau' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
         'FRI' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Landkreis Friesland' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
         'FRW' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Landkreis Märkisch-Oderland' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
         'FR' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Stadt Freiburg im Breisgau / Landkreis Breisgau-Hochschwarzwald' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
         'FS' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Landkreis Freising' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
         'FTL' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Landkreis Sächsische Schweiz-Osterzgebirge' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
         'FT' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Stadt Frankenthal (Pfalz)' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
         'FZ' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Schwalm-Eder-Kreis' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
         'FÜS' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Landkreis Ostallgäu' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
         'FÜ' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Landkreis Fürth' => '^[A-Z]{2} [1-9][0-9]{0,2}$',
+            'Stadt Fürth' => '^(?:[A-Z]{2} [1-9][0-9]{0,1}$|^[A-Z]{2} [1-9][0-9]{3}$|^[A-Z] [1-9][0-9]{0,3})$',
         ),
         'F' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Stadt Frankfurt am Main' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
+
         'GAN' => array(
             '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
