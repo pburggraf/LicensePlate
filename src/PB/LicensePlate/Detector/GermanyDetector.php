@@ -577,131 +577,135 @@ class GermanyDetector extends AbstractDetector
         ),
 
         'GAN' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Landkreis Northeim' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
         'GAP' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Landkreis Garmisch-Partenkirchen' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
         'GA' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Altmarkkreis Salzwedel' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
         'GC' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Landkreis Zwickau' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
         'GDB' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Landkreis Nordwestmecklenburg' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
         'GD' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Ostalbkreis' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
         'GEO' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Landkreis Haßberge' => '^[A|B] [1-9][0-9]{3}$',
+            'Landkreis Schweinfurt' => '^(?:[A|B] [1-9][0-9]{0,2}|(?:[C-Z]{1,2}|[A|B][A-Z]) [1-9][0-9]{0,3}$)$',
         ),
         'GER' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Landkreis Germersheim' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
         'GE' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Stadt Gelsenkirchen' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
         'GF' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Landkreis Gifhorn' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
         'GG' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Kreis Groß-Gerau' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
         'GHA' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Landkreis Leipzig' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
         'GHC' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Landkreis Wittenberg' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
         'GI' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Landkreis Gießen' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
         'GK' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Kreis Heinsberg' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
         'GLA' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Kreis Recklinghausen' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
         'GL' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Rheinisch-Bergischer Kreis' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
         'GMN' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Landkreis Vorpommern-Rügen' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
         'GM' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Oberbergischer Kreis' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
         'GNT' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Landkreis Jerichower Land' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
         'GN' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Main-Kinzig-Kreis' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
         'GOA' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Rhein-Hunsrück-Kreis' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
         'GOH' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Rhein-Lahn-Kreis' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
         'GP' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Landkreis Göppingen' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
         'GRA' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Landkreis Freyung-Grafenau' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
         'GRH' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Landkreis Meißen' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
         'GRI' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Landkreis Rottal-Inn' => '^[BIOQ] [1-9][0-9]{1,2}$',
         ),
         'GRM' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Landkreis Leipzig' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
         'GRZ' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Landkreis Greiz' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
         'GR' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Landkreis Görlitz' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
         'GS' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Landkreis Goslar' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
         'GTH' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Landkreis Gotha' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
         'GT' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Kreis Gütersloh' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
         'GUB' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Landkreis Spree-Neiße' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
         'GUN' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Landkreis Weißenburg-Gunzenhausen' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
         'GVM' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Landkreis Nordwestmecklenburg' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
         'GV' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Rhein-Kreis Neuss' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
         'GW' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Landkreis Vorpommern-Greifswald' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
         'GZ' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Landkreis Günzburg' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
         'GÖ' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Landkreis Göttingen' => '^(?:[A-CE-OQ-Z]{1,2} [1-9][0-9]{0,3}|PD [1-9][0-9])$',
+            'Stadt Göttingen' => '^[A-CE-OQ-Z]{1} [1-9][0-9]{0,3}$',
+            'Polizeidirektion Göttingen' => '^PD [1-9][0-9]{2,3}$',
         ),
         'GÜ' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Landkreis Rostock' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
         'G' => array(
-            '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
+            'Stadt Gera' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
+
         'HAB' => array(
             '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
@@ -867,6 +871,7 @@ class GermanyDetector extends AbstractDetector
         'H' => array(
             '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
+
         'IGB' => array(
             '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
@@ -885,6 +890,7 @@ class GermanyDetector extends AbstractDetector
         'IZ' => array(
             '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
+
         'JE' => array(
             '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
@@ -897,6 +903,7 @@ class GermanyDetector extends AbstractDetector
         'J' => array(
             '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
+
         'KA' => array(
             '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
@@ -993,6 +1000,7 @@ class GermanyDetector extends AbstractDetector
         'K' => array(
             '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
+
         'LAU' => array(
             '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
@@ -1092,6 +1100,7 @@ class GermanyDetector extends AbstractDetector
         'L' => array(
             '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
+
         'MAB' => array(
             '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
@@ -1242,6 +1251,7 @@ class GermanyDetector extends AbstractDetector
         'M' => array(
             '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
+
         'NAB' => array(
             '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
@@ -1347,6 +1357,7 @@ class GermanyDetector extends AbstractDetector
         'N' => array(
             '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
+
         'OAL' => array(
             '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
@@ -1416,6 +1427,7 @@ class GermanyDetector extends AbstractDetector
         'OZ' => array(
             '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
+
         'PAF' => array(
             '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
@@ -1479,12 +1491,14 @@ class GermanyDetector extends AbstractDetector
         'P' => array(
             '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
+
         'QFT' => array(
             '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
         'QLB' => array(
             '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
+
         'RA' => array(
             '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
@@ -1587,6 +1601,7 @@ class GermanyDetector extends AbstractDetector
         'R' => array(
             '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
+
         'SAB' => array(
             '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
@@ -1782,6 +1797,7 @@ class GermanyDetector extends AbstractDetector
         'S' => array(
             '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
+
         'TBB' => array(
             '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
@@ -1824,6 +1840,7 @@ class GermanyDetector extends AbstractDetector
         'TÜ' => array(
             '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
+
         'UEM' => array(
             '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
@@ -1848,6 +1865,7 @@ class GermanyDetector extends AbstractDetector
         'USI' => array(
             '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
+
         'VAI' => array(
             '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
@@ -1884,6 +1902,7 @@ class GermanyDetector extends AbstractDetector
         'V' => array(
             '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
+
         'WAF' => array(
             '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
@@ -2034,6 +2053,7 @@ class GermanyDetector extends AbstractDetector
         'W' => array(
             '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
+
         'ZEL' => array(
             '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
@@ -2061,6 +2081,7 @@ class GermanyDetector extends AbstractDetector
         'Z' => array(
             '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
+
         'ÖHR' => array(
             '' => '^[A-Z]{1,2} [1-9][0-9]{0,3}$',
         ),
