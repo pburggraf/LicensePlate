@@ -16,11 +16,49 @@ class LicensePlateFactory
     protected $licensePlate;
 
     /**
+     * @var AbstractDetector[]
+     */
+    protected $detectorTypes = [];
+
+    /**
      * @param string $licensePlate
      */
     public function __construct($licensePlate)
     {
         $this->licensePlate = $licensePlate;
+    }
+
+    /**
+     * @param string $detectorType
+     */
+    public function addDetectorType($detectorType)
+    {
+        if (!class_exists($detectorType)) {
+            throw new \RuntimeException('Detector not found');
+        }
+        
+        $this->detectorTypes[] = $detectorType;
+    }
+
+    /**
+     * @return LicensePlateResponse[]
+     */
+    public function getDetails()
+    {
+        $details = [];
+
+        foreach ($this->detectorTypes as $detectorType) {
+            /** @var AbstractDetector $detector */
+            $detector = new $detectorType($this->licensePlate);
+
+            $response = $detector->getResponse();
+
+            if ($response->isValid()) {
+                $details[] = $response;
+            }
+        }
+
+        return $details;
     }
 
     /**

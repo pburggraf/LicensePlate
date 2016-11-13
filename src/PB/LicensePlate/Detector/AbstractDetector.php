@@ -68,7 +68,7 @@ abstract class AbstractDetector implements DetectorInterface
         ), ' ', $licensePlate);
 
         // uppercase only
-        $result = strtoupper($result);
+        $result = mb_strtoupper($result);
 
         return $result;
     }
@@ -81,9 +81,25 @@ abstract class AbstractDetector implements DetectorInterface
     public function seperate($licensePlate)
     {
         // split plate
-        $result = explode(' ', $licensePlate);
+        return explode(' ', $licensePlate);
+    }
 
-        return $result;
+    /**
+     * @param string $string
+     * @param string $encoding
+     *
+     * @return string
+     */
+    protected function mb_ucfirst($string, $encoding = null)
+    {
+        if (null === $encoding) {
+            $encoding = mb_internal_encoding();
+        }
+
+        $strlen = mb_strlen($string, $encoding);
+        $firstChar = mb_substr($string, 0, 1, $encoding);
+        $then = mb_substr($string, 1, $strlen - 1, $encoding);
+        return mb_strtoupper($firstChar, $encoding) . $then;
     }
 
     /**

@@ -61,7 +61,7 @@ class LicensePlateResponse
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function isValid()
     {
@@ -69,7 +69,7 @@ class LicensePlateResponse
     }
 
     /**
-     * @param boolean $valid
+     * @param bool $valid
      */
     public function setValid($valid)
     {
@@ -93,7 +93,7 @@ class LicensePlateResponse
     }
 
     /**
-     * @param string $detail
+     * @param string|null $detail
      */
     public function addDetail($detail)
     {
