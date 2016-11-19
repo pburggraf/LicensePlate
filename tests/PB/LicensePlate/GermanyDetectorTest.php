@@ -5,241 +5,301 @@ namespace PB\LicensePlate\Test\Detector;
 use PB\LicensePlate\Detector\GermanyDetector;
 use PB\LicensePlate\LicensePlateFactory;
 
-require_once __DIR__ . '/../../../vendor/autoload.php';
-
+/**
+ * @author Philip Burggraf <philip@pburggraf.de>
+ */
 class GermanyDetectorTest extends \PHPUnit_Framework_TestCase
 {
-    protected static $plateTests = array(
-        'A A 1' => array(
+    protected static $plateTests = [
+        [
+            'plate' => 'A A 1',
             'valid' => true,
             'type' => GermanyDetector::PLATE_TYPE_DEFAULT,
-        ),
-        'A A 12' => array(
+        ],
+        [
+            'plate' => 'A A 12',
             'valid' => true,
             'type' => GermanyDetector::PLATE_TYPE_DEFAULT,
-        ),
-        'A A 123' => array(
+        ],
+        [
+            'plate' => 'A A 123',
             'valid' => true,
             'type' => GermanyDetector::PLATE_TYPE_DEFAULT,
-        ),
-        'A A 1234' => array(
+        ],
+        [
+            'plate' => 'A A 1234',
             'valid' => true,
             'type' => GermanyDetector::PLATE_TYPE_DEFAULT,
-        ),
-        'A AB 1' => array(
+        ],
+        [
+            'plate' => 'A AB 1',
             'valid' => true,
             'type' => GermanyDetector::PLATE_TYPE_DEFAULT,
-        ),
-        'A AB 12' => array(
+        ],
+        [
+            'plate' => 'A AB 12',
             'valid' => true,
             'type' => GermanyDetector::PLATE_TYPE_DEFAULT,
-        ),
-        'A AB 123' => array(
+        ],
+        [
+            'plate' => 'A AB 123',
             'valid' => true,
             'type' => GermanyDetector::PLATE_TYPE_DEFAULT,
-        ),
-        'A AB 1234' => array(
+        ],
+        [
+            'plate' => 'A AB 1234',
             'valid' => true,
             'type' => GermanyDetector::PLATE_TYPE_DEFAULT,
-        ),
+        ],
+        [
+            'plate' => 'AA A 1',
+            'valid' => true,
+            'type' => GermanyDetector::PLATE_TYPE_DEFAULT,
+        ],
+        [
+            'plate' => 'AA A 12',
+            'valid' => true,
+            'type' => GermanyDetector::PLATE_TYPE_DEFAULT,
+        ],
+        [
+            'plate' => 'AA A 123',
+            'valid' => true,
+            'type' => GermanyDetector::PLATE_TYPE_DEFAULT,
+        ],
+        [
+            'plate' => 'AA A 1234',
+            'valid' => true,
+            'type' => GermanyDetector::PLATE_TYPE_DEFAULT,
+        ],
+        [
+            'plate' => 'AA AB 1',
+            'valid' => true,
+            'type' => GermanyDetector::PLATE_TYPE_DEFAULT,
+        ],
+        [
+            'plate' => 'AA AB 12',
+            'valid' => true,
+            'type' => GermanyDetector::PLATE_TYPE_DEFAULT,
+        ],
+        [
+            'plate' => 'AA AB 123',
+            'valid' => true,
+            'type' => GermanyDetector::PLATE_TYPE_DEFAULT,
+        ],
+        [
+            'plate' => 'AA AB 1234',
+            'valid' => true,
+            'type' => GermanyDetector::PLATE_TYPE_DEFAULT,
+        ],
 
-        'AA A 1' => array(
+        [
+            'plate' => 'ABG A 1',
             'valid' => true,
             'type' => GermanyDetector::PLATE_TYPE_DEFAULT,
-        ),
-        'AA A 12' => array(
+        ],
+        [
+            'plate' => 'ABG A 12',
             'valid' => true,
             'type' => GermanyDetector::PLATE_TYPE_DEFAULT,
-        ),
-        'AA A 123' => array(
+        ],
+        [
+            'plate' => 'ABG A 123',
             'valid' => true,
             'type' => GermanyDetector::PLATE_TYPE_DEFAULT,
-        ),
-        'AA A 1234' => array(
+        ],
+        [
+            'plate' => 'ABG A 1234',
             'valid' => true,
             'type' => GermanyDetector::PLATE_TYPE_DEFAULT,
-        ),
-        'AA AB 1' => array(
+        ],
+        [
+            'plate' => 'ABG AB 1',
             'valid' => true,
             'type' => GermanyDetector::PLATE_TYPE_DEFAULT,
-        ),
-        'AA AB 12' => array(
+        ],
+        [
+            'plate' => 'ABG AB 12',
             'valid' => true,
             'type' => GermanyDetector::PLATE_TYPE_DEFAULT,
-        ),
-        'AA AB 123' => array(
+        ],
+        [
+            'plate' => 'ABG AB 123',
             'valid' => true,
             'type' => GermanyDetector::PLATE_TYPE_DEFAULT,
-        ),
-        'AA AB 1234' => array(
-            'valid' => true,
-            'type' => GermanyDetector::PLATE_TYPE_DEFAULT,
-        ),
+        ],
 
-        'ABG A 1' => array(
+        [
+            'plate' => 'AÖ A 123',
             'valid' => true,
             'type' => GermanyDetector::PLATE_TYPE_DEFAULT,
-        ),
-        'ABG A 12' => array(
-            'valid' => true,
-            'type' => GermanyDetector::PLATE_TYPE_DEFAULT,
-        ),
-        'ABG A 123' => array(
-            'valid' => true,
-            'type' => GermanyDetector::PLATE_TYPE_DEFAULT,
-        ),
-        'ABG A 1234' => array(
-            'valid' => true,
-            'type' => GermanyDetector::PLATE_TYPE_DEFAULT,
-        ),
-        'ABG AB 1' => array(
-            'valid' => true,
-            'type' => GermanyDetector::PLATE_TYPE_DEFAULT,
-        ),
-        'ABG AB 12' => array(
-            'valid' => true,
-            'type' => GermanyDetector::PLATE_TYPE_DEFAULT,
-        ),
-        'ABG AB 123' => array(
-            'valid' => true,
-            'type' => GermanyDetector::PLATE_TYPE_DEFAULT,
-        ),
+        ],
 
-        'AÖ A 123' => array(
-            'valid' => true,
-            'type' => GermanyDetector::PLATE_TYPE_DEFAULT,
-        ),
-
-        '0-1' => array(
+        [
+            'plate' => '0-1',
             'valid' => true,
             'type' => GermanyDetector::PLATE_TYPE_GOVERNMENT,
-        ),
-        '1-1' => array(
+        ],
+        [
+            'plate' => '1-1',
             'valid' => true,
             'type' => GermanyDetector::PLATE_TYPE_GOVERNMENT,
-        ),
+        ],
 
-        'BD 16-123' => array(
+        [
+            'plate' => 'BD 16-123',
             'valid' => true,
             'type' => GermanyDetector::PLATE_TYPE_FEDERAL,
-        ),
-        'BW 6-123' => array(
+        ],
+        [
+            'plate' => 'BW 6-123',
             'valid' => true,
             'type' => GermanyDetector::PLATE_TYPE_FEDERAL,
-        ),
+        ],
 
-        'AA AB 123H' => array(
+        [
+            'plate' => 'AA AB 123H',
             'valid' => true,
             'type' => GermanyDetector::PLATE_TYPE_DEFAULT,
-        ),
+        ],
 
         // police cars
-        'NRW 4 1234' => array(
+        [
+            'plate' => 'NRW 4 1234',
             'valid' => true,
             'type' => GermanyDetector::PLATE_TYPE_LOCAL_POLICE,
-        ),
-        'B 12345' => array(
+        ],
+        [
+            'plate' => 'B 12345',
             'valid' => true,
             'type' => GermanyDetector::PLATE_TYPE_LOCAL_POLICE,
-        ),
-        'LSA 12345' => array(
+        ],
+        [
+            'plate' => 'LSA 12345',
             'valid' => true,
             'type' => GermanyDetector::PLATE_TYPE_LOCAL_POLICE,
-        ),
-        'SH 12345' => array(
+        ],
+        [
+            'plate' => 'SH 12345',
             'valid' => true,
             'type' => GermanyDetector::PLATE_TYPE_LOCAL_POLICE,
-        ),
-        'MVL 34567' => array(
+        ],
+        [
+            'plate' => 'MVL 34567',
             'valid' => true,
             'type' => GermanyDetector::PLATE_TYPE_LOCAL_POLICE,
-        ),
-        'HB 1234' => array(
+        ],
+        [
+            'plate' => 'HB 1234',
             'valid' => true,
             'type' => GermanyDetector::PLATE_TYPE_LOCAL_POLICE,
-        ),
-        'HH 1234' => array(
+        ],
+        [
+            'plate' => 'HH 1234',
             'valid' => true,
             'type' => GermanyDetector::PLATE_TYPE_LOCAL_POLICE,
-        ),
-        'WI HP 1234' => array(
+        ],
+        [
+            'plate' => 'WI HP 1234',
             'valid' => true,
             'type' => GermanyDetector::PLATE_TYPE_LOCAL_POLICE,
-        ),
-        'DD Q 1234' => array(
+        ],
+        [
+            'plate' => 'DD Q 1234',
             'valid' => true,
             'type' => GermanyDetector::PLATE_TYPE_LOCAL_POLICE,
-        ),
-        'EF LP 1234' => array(
+        ],
+        [
+            'plate' => 'EF LP 1234',
             'valid' => true,
             'type' => GermanyDetector::PLATE_TYPE_LOCAL_POLICE,
-        ),
+        ],
 
         // diplomatic corps
-        '0 17 1' => array(
+        [
+            'plate' => '0 17 1',
             'valid' => true,
             'type' => GermanyDetector::PLATE_TYPE_DIPLOMATIC_CORPS,
-        ),
-        '0 17 37A' => array(
+        ],
+        [
+            'plate' => '0 17 37A',
             'valid' => true,
             'type' => GermanyDetector::PLATE_TYPE_DIPLOMATIC_CORPS,
-        ),
-        'B 17 323' => array(
+        ],
+        [
+            'plate' => 'B 17 323',
             'valid' => true,
             'type' => GermanyDetector::PLATE_TYPE_DIPLOMATIC_CORPS,
-        ),
-        'BN 17 323' => array(
+        ],
+        [
+            'plate' => 'BN 17 323',
             'valid' => true,
             'type' => GermanyDetector::PLATE_TYPE_DIPLOMATIC_CORPS,
-        ),
-        'BN 17 323C' => array(
+        ],
+        [
+            'plate' => 'BN 17 323C',
             'valid' => true,
             'type' => GermanyDetector::PLATE_TYPE_DIPLOMATIC_CORPS,
-        ),
-        'N 912' => array(
+        ],
+        [
+            'plate' => 'N 912',
             'valid' => true,
             'type' => GermanyDetector::PLATE_TYPE_DIPLOMATIC_CORPS,
-        ),
-        'F 91234' => array(
+        ],
+        [
+            'plate' => 'F 91234',
             'valid' => true,
             'type' => GermanyDetector::PLATE_TYPE_DIPLOMATIC_CORPS,
-        ),
+        ],
 
-        'Y 123123' => array(
+        [
+            'plate' => 'Y 123123',
             'valid' => true,
             'type' => GermanyDetector::PLATE_TYPE_MILITARY,
-        ),
-        'Y 123 123' => array(
+        ],
+        [
+            'plate' => 'Y 123 123',
             'valid' => true,
             'type' => GermanyDetector::PLATE_TYPE_MILITARY,
-        ),
+        ],
 
         // there is no combination starting with 'ABC'
-        'ABC AB 123' => array(
+        [
+            'plate' => 'ABC AB 123',
             'valid' => false,
             'type' => GermanyDetector::PLATE_TYPE_UNKNOWN,
-        ),
+        ],
 
         // 3 chars in combination with 2 chars and 4 numbers is not valid
-        'ABG AB 1234' => array(
+        [
+            'plate' => 'ABG AB 1234',
             'valid' => false,
             'type' => GermanyDetector::PLATE_TYPE_UNKNOWN,
-        ),
-    );
+        ],
+    ];
 
-    public function testValidate()
+    /**
+     * @dataProvider getDataProvider
+     */
+    public function testValidity($plate, $validity, $type)
     {
-        foreach (self::$plateTests as $plate => $result) {
-            $validationResult = LicensePlateFactory::fromString($plate, GermanyDetector::class)->isValid();
-            self::assertEquals($result['valid'], $validationResult);
-        }
+        $validationResult = LicensePlateFactory::fromString($plate, GermanyDetector::class)->isValid();
+        $this->assertEquals($validity, $validationResult, sprintf('Tested plate: \'%s\', should be %s', $plate, (bool)$validity));
     }
 
-    public function testType()
+    /**
+     * @dataProvider getDataProvider
+     */
+    public function testType($plate, $validity, $type)
     {
-        foreach (self::$plateTests as $plate => $result) {
-            $typeResult = LicensePlateFactory::fromString($plate, GermanyDetector::class)->getType();
-            self::assertEquals($result['type'], $typeResult);
-        }
+        $typeResult = LicensePlateFactory::fromString($plate, GermanyDetector::class)->getType();
+        $this->assertEquals($type, $typeResult, sprintf('Tested plate: \'%s\', should be %s', $plate, $type));
+    }
+
+    /**
+     * @return array
+     */
+    public function getDataProvider()
+    {
+        return self::$plateTests;
     }
 }
