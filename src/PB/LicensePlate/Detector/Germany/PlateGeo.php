@@ -21,8 +21,8 @@ class PlateGeo extends AbstractGermanyPlate
      * @var string[]
      */
     protected static $regexes = [
-        '^[A|B] [1-9][0-9]{3}$',
-        '^(?:[A|B] [1-9][0-9]{0,2}|(?:[C-Z]{1,2}|[A|B][A-Z]) [1-9][0-9]{0,3}$)$',
+        '/^GEO [A|B] [1-9][0-9]{3}$/',
+        '/^GEO (?:[A|B] [1-9][0-9]{0,2}|(?:[C-Z]{1,2}|[A|B][A-Z]) [1-9][0-9]{0,3})$/',
     ];
 
     /**

@@ -22,9 +22,9 @@ class PlateGö extends AbstractGermanyPlate
      * @var string[]
      */
     protected static $regexes = [
-        '^(?:[A-CE-OQ-Z]{1,2} [1-9][0-9]{0,3}|PD [1-9][0-9])$',
-        '^[A-CE-OQ-Z]{1} [1-9][0-9]{0,3}$',
-        '^PD [1-9][0-9]{2,3}$',
+        '/^GÖ (?:[A-CE-OQ-Z]{1,2} [1-9][0-9]{0,3}|PD [1-9][0-9])$/',
+        '/^GÖ [A-CE-OQ-Z]{1} [1-9][0-9]{0,3}$/',
+        '/^GÖ PD [1-9][0-9]{2,3}$/',
     ];
 
     /**

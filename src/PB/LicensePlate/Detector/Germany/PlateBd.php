@@ -7,29 +7,26 @@ use PB\LicensePlate\Detector\GermanyDetector;
 /**
  * @author Philip Burggraf <philip@pburggraf.de>
  */
-class PlateDd extends AbstractGermanyPlate
+class PlateBd extends AbstractGermanyPlate
 {
     /**
      * @var string[]
      */
     protected static $name = [
-        'Dresden',
-        'Polizei Sachsen',
+        'Bundesfahrzeug',
     ];
 
     /**
      * @var string[]
      */
     protected static $regexes = [
-        '/^DD (?:[A-P|R-Z]{1,2} [1-9][0-9]{0,3}|Q [1-9][0-9]{0,2})$/',
-        '/^DD Q [1-9][0-9]{3}$/',
+        '/^BD (?:[0-9]{1,4} [0-9]{1,4}|[0-9]{1,6})[A-Z]?$/',
     ];
 
     /**
      * @var int[]
      */
     protected static $type = [
-        GermanyDetector::PLATE_TYPE_DEFAULT,
-        GermanyDetector::PLATE_TYPE_LOCAL_POLICE,
+        GermanyDetector::PLATE_TYPE_FEDERAL,
     ];
 }

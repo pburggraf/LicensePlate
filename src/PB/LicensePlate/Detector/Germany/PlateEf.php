@@ -21,8 +21,8 @@ class PlateEf extends AbstractGermanyPlate
      * @var string[]
      */
     protected static $regexes = [
-        '(?:^[A-KM-OQ-Z]{1,2} [1-9][0-9]{0,3}$|^[LP]{1,2} [1-9][0-9]{0,2}$)',
-        '^LP [1-9][0-9]{3}$',
+        '/^EF (?:[A-KM-OQ-Z]{1,2} [1-9][0-9]{0,3}|[LP]{1,2} [1-9][0-9]{0,2})$/',
+        '/^EF LP [1-9][0-9]{3}$/',
     ];
 
     /**
