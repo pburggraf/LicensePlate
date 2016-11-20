@@ -7,26 +7,29 @@ use PB\LicensePlate\Detector\GermanyDetector;
 /**
  * @author Philip Burggraf <philip@pburggraf.de>
  */
-class PlateLsa extends AbstractGermanyPlate
+class PlateL extends AbstractGermanyPlate
 {
     /**
      * @var string[]
      */
     protected static $name = [
-        'Landesfahrzeug',
+        'Stadt Leipzig',
+        'Landkreis Leipzig',
     ];
 
     /**
      * @var string[]
      */
     protected static $regexes = [
-        '/^LSA (?:[0-9]{1,4} [0-9]{1,4}|[0-9]{1,6})[A-Z]?$/',
+        '/^L [A-T][A_Z]? [1-9][0-9]{0,3}[EH]?$/',
+        '/^L [U-Z][A-Z]? [1-9][0-9]{0,3}[EH]?$/',
     ];
 
     /**
      * @var int[]
      */
     protected static $type = [
-        GermanyDetector::PLATE_TYPE_FEDERAL,
+        GermanyDetector::PLATE_TYPE_DEFAULT,
+        GermanyDetector::PLATE_TYPE_DEFAULT,
     ];
 }

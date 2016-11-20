@@ -7,7 +7,7 @@ use PB\LicensePlate\Detector\GermanyDetector;
 /**
  * @author Philip Burggraf <philip@pburggraf.de>
  */
-class PlateLsa extends AbstractGermanyPlate
+class PlateLsn extends AbstractGermanyPlate
 {
     /**
      * @var string[]
@@ -20,7 +20,7 @@ class PlateLsa extends AbstractGermanyPlate
      * @var string[]
      */
     protected static $regexes = [
-        '/^LSA (?:[0-9]{1,4} [0-9]{1,4}|[0-9]{1,6})[A-Z]?$/',
+        '/^LSN (?:[0-9]{1,4} [0-9]{1,4}|[0-9]{1,6})[A-Z]?$/',
     ];
 
     /**
