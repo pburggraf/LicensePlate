@@ -27,6 +27,6 @@ class PlateLsa extends AbstractGermanyPlate
      * @var int[]
      */
     protected static $type = [
-        GermanyDetector::PLATE_TYPE_FEDERAL,
+        GermanyDetector::PLATE_TYPE_LOCAL_POLICE,
     ];
 }

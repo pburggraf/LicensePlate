@@ -17,7 +17,6 @@ class PlateKa extends AbstractGermanyPlate
         'Landkreis Karlsruhe',
     ];
 
-
     /**
      * @var string[]
      */
