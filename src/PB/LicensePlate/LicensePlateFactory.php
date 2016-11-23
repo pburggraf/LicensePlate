@@ -29,7 +29,9 @@ class LicensePlateFactory
     }
 
     /**
-     * @param string $detectorType
+     * @param $detectorType
+     *
+     * @throws \RuntimeException
      */
     public function addDetectorType($detectorType)
     {
@@ -64,6 +66,8 @@ class LicensePlateFactory
     /**
      * @param string $licensePlate
      * @param string $detectorType
+     *
+     * @throws \RuntimeException
      *
      * @return LicensePlateResponse
      */
