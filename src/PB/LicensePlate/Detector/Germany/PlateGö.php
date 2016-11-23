@@ -7,7 +7,7 @@ use PB\LicensePlate\Detector\GermanyDetector;
 /**
  * @author Philip Burggraf <philip@pburggraf.de>
  */
-class PlateGö extends AbstractGermanyPlate
+class PlateGö extends AbstractGermanyPlate
 {
     /**
      * @var string[]

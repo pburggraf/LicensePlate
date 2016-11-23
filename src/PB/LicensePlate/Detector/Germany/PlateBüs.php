@@ -2,12 +2,10 @@
 
 namespace PB\LicensePlate\Detector\Germany;
 
-use PB\LicensePlate\Detector\GermanyDetector;
-
 /**
  * @author Philip Burggraf <philip@pburggraf.de>
  */
-class PlateBüs extends AbstractGermanyPlate
+class PlateBüs extends AbstractGermanyPlate
 {
     /**
      * @var string[]
