@@ -38,7 +38,7 @@ class LicensePlateFactory
         if (!class_exists($detectorType)) {
             throw new \RuntimeException('Detector not found');
         }
-        
+
         $this->detectorTypes[] = $detectorType;
     }
 

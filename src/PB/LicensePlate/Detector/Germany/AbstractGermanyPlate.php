@@ -1,6 +1,7 @@
 <?php
 
 namespace PB\LicensePlate\Detector\Germany;
+
 use PB\LicensePlate\Detector\GermanyDetector;
 
 /**

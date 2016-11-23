@@ -13,7 +13,7 @@ class PlateNl extends AbstractGermanyPlate
      * @var string[]
      */
     protected static $name = [
-        'Länderfahrzeug'
+        'Länderfahrzeug',
     ];
 
     /**

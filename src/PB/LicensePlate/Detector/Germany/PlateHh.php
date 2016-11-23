@@ -14,7 +14,7 @@ class PlateHh extends AbstractGermanyPlate
      */
     protected static $name = [
         'Freie und Hansestadt Hamburg, Senat und Bürgerschaft',
-        'Länderfahrzeug'
+        'Länderfahrzeug',
     ];
 
     /**

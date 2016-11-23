@@ -15,7 +15,7 @@ class PlateHb extends AbstractGermanyPlate
     protected static $name = [
         'Stadt Bremen, Senat und Bürgerschaft',
         'Stadt Bremerhaven',
-        'Länderfahrzeug'
+        'Länderfahrzeug',
     ];
 
     /**

@@ -101,5 +101,4 @@ class NetherlandsDetector extends AbstractDetector
 
         return $this->response;
     }
-
 }
