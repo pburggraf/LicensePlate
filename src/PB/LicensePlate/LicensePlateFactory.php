@@ -45,9 +45,9 @@ class LicensePlateFactory
     /**
      * @return LicensePlateResponse[]
      */
-    public function getDetails()
+    public function getResults()
     {
-        $details = [];
+        $results = [];
 
         foreach ($this->detectorTypes as $detectorType) {
             /** @var AbstractDetector $detector */
@@ -56,30 +56,40 @@ class LicensePlateFactory
             $response = $detector->getResponse();
 
             if ($response->isValid()) {
-                $details[] = $response;
+                $results[] = $response;
             }
         }
 
-        return $details;
+        return $results;
     }
 
     /**
      * @param string $licensePlate
-     * @param string $detectorType
+     * @param array  $detectorTypes
      *
      * @throws \RuntimeException
      *
-     * @return LicensePlateResponse
+     * @return LicensePlateResponse[]
      */
-    public static function fromString($licensePlate, $detectorType)
+    public static function fromString($licensePlate, $detectorTypes)
     {
-        if (!class_exists($detectorType)) {
-            throw new \RuntimeException('Detector not found');
+        $results = [];
+
+        foreach ($detectorTypes as $detectorType) {
+            if (!class_exists($detectorType)) {
+                throw new \RuntimeException('Detector not found');
+            }
+
+            /** @var AbstractDetector $detector */
+            $detector = new $detectorType($licensePlate);
+
+            $response = $detector->getResponse();
+
+            if ($response->isValid()) {
+                $results[] = $response;
+            }
         }
 
-        /** @var AbstractDetector $detector */
-        $detector = new $detectorType($licensePlate);
-
-        return $detector->getResponse();
+        return $results;
     }
 }
