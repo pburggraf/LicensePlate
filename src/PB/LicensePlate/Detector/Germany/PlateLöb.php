@@ -5,7 +5,7 @@ namespace PB\LicensePlate\Detector\Germany;
 /**
  * @author Philip Burggraf <philip@pburggraf.de>
  */
-class PlateLöb extends AbstractGermanyPlate
+class PlateLöb extends AbstractGermanyPlate
 {
     /**
      * @var string[]
