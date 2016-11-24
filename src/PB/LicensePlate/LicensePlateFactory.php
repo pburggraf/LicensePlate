@@ -71,7 +71,7 @@ class LicensePlateFactory
      *
      * @return LicensePlateResponse[]
      */
-    public static function fromString($licensePlate, $detectorTypes)
+    public static function fromString($licensePlate, array $detectorTypes)
     {
         $results = [];
 

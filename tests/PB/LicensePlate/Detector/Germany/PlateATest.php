@@ -125,8 +125,12 @@ class PlateATest extends \PHPUnit_Framework_TestCase
      */
     public function testDescription($plate, $description, $type)
     {
-        $descriptionResult = LicensePlateFactory::fromString($plate, GermanyDetector::class)->getDetails();
-        $this->assertEquals($description, $descriptionResult);
+        $descriptionResults = LicensePlateFactory::fromString($plate, [GermanyDetector::class]);
+
+        foreach ($descriptionResults as $descriptionResult) {
+            $result = $descriptionResult->getDetails();
+            $this->assertEquals($description, $result);
+        }
     }
 
     /**
@@ -138,8 +142,12 @@ class PlateATest extends \PHPUnit_Framework_TestCase
      */
     public function testType($plate, $description, $type)
     {
-        $typeResult = LicensePlateFactory::fromString($plate, GermanyDetector::class)->getType();
-        $this->assertEquals($type, $typeResult, sprintf('Tested plate: \'%s\', should be %s', $plate, $type));
+        $typeResults = LicensePlateFactory::fromString($plate, [GermanyDetector::class]);
+
+        foreach ($typeResults as $typeResult) {
+            $result = $typeResult->getType();
+            $this->assertEquals($type, $result, sprintf('Tested plate: \'%s\', should be %s', $plate, $type));
+        }
     }
 
     /**

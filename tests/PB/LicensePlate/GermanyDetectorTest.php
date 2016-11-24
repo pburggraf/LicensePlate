@@ -282,8 +282,12 @@ class GermanyDetectorTest extends \PHPUnit_Framework_TestCase
      */
     public function testValidity($plate, $validity, $type)
     {
-        $validationResult = LicensePlateFactory::fromString($plate, GermanyDetector::class)->isValid();
-        $this->assertEquals($validity, $validationResult, sprintf('Tested plate: \'%s\', should be %s', $plate, (bool)$validity));
+        $validationResults = LicensePlateFactory::fromString($plate, [GermanyDetector::class]);
+
+        foreach ($validationResults as $validationResult) {
+            $result = $validationResult->isValid();
+            $this->assertEquals($validity, $result, sprintf('Tested plate: \'%s\', should be %s', $plate, (bool)$validity));
+        }
     }
 
     /**
@@ -291,8 +295,12 @@ class GermanyDetectorTest extends \PHPUnit_Framework_TestCase
      */
     public function testType($plate, $validity, $type)
     {
-        $typeResult = LicensePlateFactory::fromString($plate, GermanyDetector::class)->getType();
-        $this->assertEquals($type, $typeResult, sprintf('Tested plate: \'%s\', should be %s', $plate, $type));
+        $typeResults = LicensePlateFactory::fromString($plate, [GermanyDetector::class]);
+
+        foreach ($typeResults as $typeResult) {
+            $result = $typeResult->getType();
+            $this->assertEquals($type, $result, sprintf('Tested plate: \'%s\', should be %s', $plate, $type));
+        }
     }
 
     /**
