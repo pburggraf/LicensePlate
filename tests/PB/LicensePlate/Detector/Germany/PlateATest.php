@@ -1,6 +1,6 @@
 <?php
 
-namespace PB\LicensePlate\Test\Detector\Detector\Germany;
+namespace PB\LicensePlate\Test\Detector\Germany;
 
 use PB\LicensePlate\Detector\GermanyDetector;
 use PB\LicensePlate\LicensePlateFactory;
@@ -8,7 +8,7 @@ use PB\LicensePlate\LicensePlateFactory;
 /**
  * @author Philip Burggraf <philip@pburggraf.de>
  */
-class PlateATest extends \PHPUnit_Framework_TestCase
+class PlateATest extends AbstractGermanyPlate
 {
     /**
      * @var array
@@ -148,13 +148,5 @@ class PlateATest extends \PHPUnit_Framework_TestCase
             $result = $typeResult->getType();
             $this->assertEquals($type, $result, sprintf('Tested plate: \'%s\', should be %s', $plate, $type));
         }
-    }
-
-    /**
-     * @return array
-     */
-    public function getDataProvider()
-    {
-        return self::$plateTests;
     }
 }
