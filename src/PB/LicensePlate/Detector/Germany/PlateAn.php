@@ -21,7 +21,7 @@ class PlateAn extends AbstractGermanyPlate
      * @var string[]
      */
     protected static $regexes = [
-        '/^AN [A-Z]{2} [1-9][0-9]{0,2}$/',
+        '/^AN [A-Z]{2} [1-9][0-9]{2}$/',
         '/^AN (?:[A-Z]{2} [1-9][0-9]{0,1}|[A-Z]{2} [1-9][0-9]{3}|[A-Z] [1-9][0-9]{0,3})$/',
     ];
 
