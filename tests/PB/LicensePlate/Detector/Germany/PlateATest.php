@@ -125,12 +125,7 @@ class PlateATest extends AbstractGermanyPlate
      */
     public function testDescription($plate, $description, $type)
     {
-        $descriptionResults = LicensePlateFactory::fromString($plate, [GermanyDetector::class]);
-
-        foreach ($descriptionResults as $descriptionResult) {
-            $result = $descriptionResult->getDetails();
-            $this->assertEquals($description, $result);
-        }
+        return parent::testDescription($plate, $description, $type);
     }
 
     /**
@@ -142,11 +137,6 @@ class PlateATest extends AbstractGermanyPlate
      */
     public function testType($plate, $description, $type)
     {
-        $typeResults = LicensePlateFactory::fromString($plate, [GermanyDetector::class]);
-
-        foreach ($typeResults as $typeResult) {
-            $result = $typeResult->getType();
-            $this->assertEquals($type, $result, sprintf('Tested plate: \'%s\', should be %s', $plate, $type));
-        }
+        return parent::testDescription($plate, $description, $type);
     }
 }
