@@ -13,15 +13,15 @@ class PlateFü extends AbstractGermanyPlate
      * @var string[]
      */
     protected static $name = [
-        'Landkreis Fürth',
         'Stadt Fürth',
+        'Landkreis Fürth',
     ];
 
     /**
      * @var string[]
      */
     protected static $regexes = [
-        '/^FÜ [A-Z]{2} [1-9][0-9]{0,2}$/',
+        '/^FÜ [A-Z]{2} [1-9][0-9]{2}$/',
         '/^FÜ (?:[A-Z]{2} [1-9][0-9]{0,1}|[A-Z]{2} [1-9][0-9]{3}|[A-Z] [1-9][0-9]{0,3})$/',
     ];
 
