@@ -9,7 +9,7 @@ use PB\LicensePlate\Test\Detector\Germany\AbstractGermanyPlate;
 /**
  * @author Philip Burggraf <philip@pburggraf.de>
  */
-class PlateHbTest extends AbstractGermanyPlate
+class PlateHoTest extends AbstractGermanyPlate
 {
     /**
      * @var array
