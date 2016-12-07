@@ -22,7 +22,7 @@ class PlateMai extends AbstractGermanyPlate
      */
     protected static $regexes = [
         '/^MAI [BFGIOQ] [1-9][0-9]{0,3}$/',
-        '/^MAI [AC-EHJ-NPR-Z] [1-9][0-9]{0,3}$/',
+        '/^MAI [AC-EHJ-NPR-Z][A-Z]{0,1} [1-9][0-9]{0,3}$/',
     ];
 
     /**
