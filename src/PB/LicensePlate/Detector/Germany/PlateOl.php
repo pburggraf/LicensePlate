@@ -22,8 +22,8 @@ class PlateOl extends AbstractGermanyPlate
      * @var string[]
      */
     protected static $regexes = [
-        '/^OL (?:[A-OQ-Z][A-CE-Z] [1-9][0-9]{2,3}|[A-Z] [1-9][0-9]{3}|PD [1-9][0-9]{3})$/',
-        '/^OL [A-Z] [1-9][0-9]{0,2}$/',
+        '/^OL (?:[A-OQ-Z][A-CE-Z] [1-9][0-9]{0,3}|PD [1-9](?:[0-9]{0,1}|[0-9]{3}))$/',
+        '/^OL [A-Z] [1-9][0-9]{0,3}$/',
         '/^OL PD [1-9][0-9]{2}$/',
     ];
 
