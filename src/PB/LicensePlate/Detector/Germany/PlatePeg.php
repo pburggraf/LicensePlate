@@ -35,6 +35,7 @@ class PlatePeg extends AbstractGermanyPlate
     protected static $type = [
         GermanyDetector::PLATE_TYPE_DEFAULT,
         GermanyDetector::PLATE_TYPE_DEFAULT,
+        GermanyDetector::PLATE_TYPE_DEFAULT,
         GermanyDetector::PLATE_TYPE_INVALID,
     ];
 }
