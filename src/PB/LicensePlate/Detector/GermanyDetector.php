@@ -10,6 +10,7 @@ use PB\LicensePlate\Response\LicensePlateResponse;
  */
 class GermanyDetector extends AbstractDetector
 {
+    const PLATE_TYPE_INVALID = 0;
     const PLATE_TYPE_DEFAULT = 1;
     const PLATE_TYPE_GOVERNMENT = 2;
     const PLATE_TYPE_DIPLOMATIC_CORPS = 3;
