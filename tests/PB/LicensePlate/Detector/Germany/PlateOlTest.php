@@ -90,7 +90,7 @@ class PlateOlTest extends AbstractGermanyPlate
             'description' => [
                 'Polizeidirektion Oldenburg'
             ],
-            'type' => GermanyDetector::PLATE_TYPE_DEFAULT,
+            'type' => GermanyDetector::PLATE_TYPE_LOCAL_POLICE,
         ],
         [
             'plate' => 'OL PD 1000',
@@ -121,7 +121,7 @@ class PlateOlTest extends AbstractGermanyPlate
      * @param $type
      */
     public function testType($plate, $description, $type)
-    {
-        return parent::testDescription($plate, $description, $type);
+     {
+         return parent::testType($plate, $description, $type);
     }
 }

@@ -90,14 +90,14 @@ class PlateLgTest extends AbstractGermanyPlate
             'description' => [
                 'Polizeidirektion Lüneburg'
             ],
-            'type' => GermanyDetector::PLATE_TYPE_DEFAULT,
+            'type' => GermanyDetector::PLATE_TYPE_LOCAL_POLICE,
         ],
         [
             'plate' => 'LG PD 1000',
             'description' => [
                 'Polizeidirektion Lüneburg'
             ],
-            'type' => GermanyDetector::PLATE_TYPE_DEFAULT,
+            'type' => GermanyDetector::PLATE_TYPE_LOCAL_POLICE,
         ],
     ];
 
@@ -121,7 +121,7 @@ class PlateLgTest extends AbstractGermanyPlate
      * @param $type
      */
     public function testType($plate, $description, $type)
-    {
-        return parent::testDescription($plate, $description, $type);
+     {
+         return parent::testType($plate, $description, $type);
     }
 }

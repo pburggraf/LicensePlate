@@ -76,28 +76,28 @@ class PlatePegTest extends AbstractGermanyPlate
             'description' => [
                 ''
             ],
-            'type' => GermanyDetector::PLATE_TYPE_DEFAULT,
+            'type' => GermanyDetector::PLATE_TYPE_UNKNOWN,
         ],
         [
             'plate' => 'PEG AA 10',
             'description' => [
                 ''
             ],
-            'type' => GermanyDetector::PLATE_TYPE_DEFAULT,
+            'type' => GermanyDetector::PLATE_TYPE_UNKNOWN,
         ],
         [
             'plate' => 'PEG AA 100',
             'description' => [
                 ''
             ],
-            'type' => GermanyDetector::PLATE_TYPE_DEFAULT,
+            'type' => GermanyDetector::PLATE_TYPE_UNKNOWN,
         ],
         [
             'plate' => 'PEG AA 1000',
             'description' => [
                 ''
             ],
-            'type' => GermanyDetector::PLATE_TYPE_DEFAULT,
+            'type' => GermanyDetector::PLATE_TYPE_UNKNOWN,
         ],
     ];
 
@@ -121,7 +121,7 @@ class PlatePegTest extends AbstractGermanyPlate
      * @param $type
      */
     public function testType($plate, $description, $type)
-    {
-        return parent::testDescription($plate, $description, $type);
+     {
+         return parent::testType($plate, $description, $type);
     }
 }

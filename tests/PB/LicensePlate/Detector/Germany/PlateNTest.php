@@ -92,7 +92,7 @@ class PlateNTest extends AbstractGermanyPlate
             'description' => [
                 'Polizeipräsidium Mittelfranken'
             ],
-            'type' => GermanyDetector::PLATE_TYPE_DEFAULT,
+            'type' => GermanyDetector::PLATE_TYPE_LOCAL_POLICE,
         ],
         [
             'plate' => 'N PP 1000',
@@ -123,7 +123,7 @@ class PlateNTest extends AbstractGermanyPlate
      * @param $type
      */
     public function testType($plate, $description, $type)
-    {
-        return parent::testDescription($plate, $description, $type);
+     {
+         return parent::testType($plate, $description, $type);
     }
 }

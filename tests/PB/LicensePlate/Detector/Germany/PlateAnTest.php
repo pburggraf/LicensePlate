@@ -95,6 +95,6 @@ class PlateAnTest extends AbstractGermanyPlate
      */
     public function testType($plate, $description, $type)
     {
-        return parent::testDescription($plate, $description, $type);
+        return parent::testType($plate, $description, $type);
     }
 }

@@ -208,14 +208,14 @@ class PlateHTest extends AbstractGermanyPlate
             'description' => [
                 'Zentrale Polizeidirektion Niedersachsen'
             ],
-            'type' => GermanyDetector::PLATE_TYPE_DEFAULT,
+            'type' => GermanyDetector::PLATE_TYPE_LOCAL_POLICE,
         ],
         [
             'plate' => 'H ZD 1000',
             'description' => [
                 'Zentrale Polizeidirektion Niedersachsen'
             ],
-            'type' => GermanyDetector::PLATE_TYPE_DEFAULT,
+            'type' => GermanyDetector::PLATE_TYPE_LOCAL_POLICE,
         ],
 
         [
@@ -237,14 +237,14 @@ class PlateHTest extends AbstractGermanyPlate
             'description' => [
                 'Polizeidirektion Hannover'
             ],
-            'type' => GermanyDetector::PLATE_TYPE_DEFAULT,
+            'type' => GermanyDetector::PLATE_TYPE_LOCAL_POLICE,
         ],
         [
             'plate' => 'H PD 1000',
             'description' => [
                 'Polizeidirektion Hannover'
             ],
-            'type' => GermanyDetector::PLATE_TYPE_DEFAULT,
+            'type' => GermanyDetector::PLATE_TYPE_LOCAL_POLICE,
         ],
     ];
 
@@ -268,7 +268,7 @@ class PlateHTest extends AbstractGermanyPlate
      * @param $type
      */
     public function testType($plate, $description, $type)
-    {
-        return parent::testDescription($plate, $description, $type);
+     {
+         return parent::testType($plate, $description, $type);
     }
 }
