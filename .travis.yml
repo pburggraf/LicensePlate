@@ -10,7 +10,8 @@ sudo: false
 matrix:
     fast_finish: true
 
-script: phpunit
+script:
+  - vendor/bin/phpunit
 
 before_script:
   - composer install
