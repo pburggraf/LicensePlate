@@ -16,6 +16,7 @@ class PlateSr extends AbstractGermanyPlate
         'Landkreis Straubing-Bogen',
         'Stadt Straubing',
         'Polizeipräsidium Niederbayern',
+        '',
     ];
 
     /**
@@ -23,8 +24,9 @@ class PlateSr extends AbstractGermanyPlate
      */
     protected static $regexes = [
         '/^SR (?:[A-Z]{2} [1-9][0-9]{0,2})$/',
-        '/^SR (?:[A-Z] [1-9][0-9]{0,2}$|P [2-9][0-9]{3}$)$/',
+        '/^SR (?:[A-Z] [1-9][0-9]{0,2}|[A-OQ-Z] [1-9][0-9]{3}|P [2-9][0-9]{3})$/',
         '/^SR P 1[0-9]{3}$/',
+        '/^SR [A-Z]{2} [1-9][0-9]{3}$/',
     ];
 
     /**
@@ -34,5 +36,6 @@ class PlateSr extends AbstractGermanyPlate
         GermanyDetector::PLATE_TYPE_DEFAULT,
         GermanyDetector::PLATE_TYPE_DEFAULT,
         GermanyDetector::PLATE_TYPE_LOCAL_POLICE,
+        GermanyDetector::PLATE_TYPE_INVALID,
     ];
 }
