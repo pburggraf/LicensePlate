@@ -28,7 +28,7 @@ class GermanyDetector extends AbstractDetector
             $plateParts = $this->seperatedLicensePlate;
 
             /** @var AbstractGermanyPlate $plateClassname */
-            $plateClassname = __NAMESPACE__ . '\\Germany\\' . 'Plate' . $this->mb_ucfirst(mb_strtolower($plateParts[0]));
+            $plateClassname = __NAMESPACE__ . '\\Germany\\' . 'Plate' . $this->mb_ucfirst(mb_strtolower(str_replace(['ä', 'ö', 'ü', 'Ä', 'Ö', 'Ü'], ['ae', 'oe', 'ue', 'Ae', 'Oe', 'Ue'], $plateParts[0])));
 
             if (class_exists($plateClassname)) {
                 $licensePlate = count($plateParts) > 2 ? $plateParts[0] . ' ' . $plateParts[1] . ' ' . $plateParts[2] : $plateParts[0] . ' ' . $plateParts[1];

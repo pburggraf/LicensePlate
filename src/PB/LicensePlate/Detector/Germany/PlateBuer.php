@@ -1,0 +1,16 @@
+<?php
+
+namespace PB\LicensePlate\Detector\Germany;
+
+/**
+ * @author Philip Burggraf <philip@pburggraf.de>
+ */
+class PlateBuer extends AbstractGermanyPlate
+{
+    /**
+     * @var string[]
+     */
+    protected static $name = [
+        'Kreis Paderborn',
+    ];
+}
