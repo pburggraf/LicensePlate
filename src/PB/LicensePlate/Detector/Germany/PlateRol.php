@@ -21,8 +21,8 @@ class PlateRol extends AbstractGermanyPlate
      * @var string[]
      */
     protected static $regexes = [
-        '/^ROL (?:[A-Z]{2} [1-9][0-9]{0,2}|[BFGIOQ] [1-9][0-9]{0,3})$/',
         '/^ROL (?:[A-Z]{2} [1-9][0-9]{3}|[AC-EHJ-NPR-Z] [1-9][0-9]{0,3})$/',
+        '/^ROL (?:[A-Z]{2} [1-9][0-9]{0,2}|[BFGIOQ] [1-9][0-9]{0,3})$/',
     ];
 
     /**
