@@ -5,9 +5,9 @@ Easily validate license plates and get some information (planned feature).
 
 ## How to use
 
-    use PB\LicensePlate\LicensePlateFactory;
-    use PB\LicensePlate\Detector\GermanyDetector;
-    use PB\LicensePlate\Detector\NetherlandsDetector;
+    use PBurggraf\LicensePlate\LicensePlateFactory;
+    use PBurggraf\LicensePlate\Detector\GermanyDetector;
+    use PBurggraf\LicensePlate\Detector\NetherlandsDetector;
 
     // Procedural style
     $procedural = LicensePlateFactory::fromString($plate, [

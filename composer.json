@@ -10,12 +10,12 @@
   ],
   "autoload": {
     "psr-4": {
-      "PB\\LicensePlate\\": "src/PB/LicensePlate/"
+      "PBurggraf\\LicensePlate\\": "src/PBurggraf/LicensePlate/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "PB\\LicensePlate\\Test\\": "tests/PB/LicensePlate/"
+      "PBurggraf\\LicensePlate\\Test\\": "tests/PBurggraf/LicensePlate/"
     }
   },
   "require": {
