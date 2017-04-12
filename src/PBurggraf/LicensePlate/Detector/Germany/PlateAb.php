@@ -22,7 +22,7 @@ class PlateAb extends AbstractGermanyPlate
      */
     protected static $regexes = [
         '/^AB [A-Z]{2} [1-9][0-9]{2,3}$/',
-        '/^AB (?:[A-Z]{2} [1-9][0-9]{0,1}|[A-Z] [1-9][0-9]{0,3})$/',
+        '/^AB (?:[A-Z]{2} [1-9][0-9]?|[A-Z] [1-9][0-9]{0,3})$/',
     ];
 
     /**

@@ -22,7 +22,7 @@ class PlateReh extends AbstractGermanyPlate
      */
     protected static $regexes = [
         '/^REH (?:[AEFHJMNPRSVX] [1-9][0-9]{0,2}|(?:AA|FF|GG|OO|ZZ) [1-9][0-9]{2}|AU 9[0-9]{2})$/',
-        '/^REH (?:[BCDGIKLOQTUWYZ] [1-9][0-9]{0,2}|(?:AA|FF|GG|OO|ZZ) [1-9](?:[0-9]{0,1}|[0-9]{3})|(?:[B-EH-NP-Y][A-Z]|[A-Z][B-EH-NP-Y]) [1-9][0-9]{0,3}|AU [1-8][0-9]{2}|[A-Z] [1-9][0-9]{3})$/',
+        '/^REH (?:[BCDGIKLOQTUWYZ] [1-9][0-9]{0,2}|(?:AA|FF|GG|OO|ZZ) [1-9](?:[0-9]?|[0-9]{3})|(?:[B-EH-NP-Y][A-Z]|[A-Z][B-EH-NP-Y]) [1-9][0-9]{0,3}|AU [1-8][0-9]{2}|[A-Z] [1-9][0-9]{3})$/',
     ];
 
     /**

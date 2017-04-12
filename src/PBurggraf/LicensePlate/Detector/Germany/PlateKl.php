@@ -21,7 +21,7 @@ class PlateKl extends AbstractGermanyPlate
      * @var string[]
      */
     protected static $regexes = [
-        '/^KL (?:[A-Z]{2} [1-9][0-9]{0,1}|[A-Z]{2} [1-9][0-9]{3}|[A-Z] [1-9][0-9]{0,3})$/',
+        '/^KL (?:[A-Z]{2} [1-9][0-9]?|[A-Z]{2} [1-9][0-9]{3}|[A-Z] [1-9][0-9]{0,3})$/',
         '/^KL [A-Z]{2} [1-9][0-9]{0,2}$/',
     ];
 

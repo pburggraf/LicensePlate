@@ -22,7 +22,7 @@ class PlateSw extends AbstractGermanyPlate
      */
     protected static $regexes = [
         '/^SW (?:[A-Z] [1-9][0-9]{0,3}|[A-Z]{2} [1-9][0-9]{2,3})$/',
-        '/^SW [A-Z]{2} [1-9][0-9]{0,1}$/',
+        '/^SW [A-Z]{2} [1-9][0-9]?$/',
     ];
 
     /**

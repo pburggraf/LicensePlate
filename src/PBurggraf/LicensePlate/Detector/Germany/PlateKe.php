@@ -21,7 +21,7 @@ class PlateKe extends AbstractGermanyPlate
      * @var string[]
      */
     protected static $regexes = [
-        '/^KE (?:(?:[A-OQ-Z]{2}|[A-Z]) [1-9][0-9]{0,3}|PP [1-9](?:[0-9]{0,1}|[0-9]{3}))$/',
+        '/^KE (?:(?:[A-OQ-Z]{2}|[A-Z]) [1-9][0-9]{0,3}|PP [1-9](?:[0-9]?|[0-9]{3}))$/',
         '/^KE PP [1-9][0-9]{2}$/',
     ];
 

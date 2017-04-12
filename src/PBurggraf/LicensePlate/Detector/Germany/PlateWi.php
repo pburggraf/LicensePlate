@@ -21,7 +21,7 @@ class PlateWi extends AbstractGermanyPlate
      * @var string[]
      */
     protected static $regexes = [
-        '/^WI (?:(?:[A-GI-Z][A-OQ-Z]|H[A-OQ-Z]|[A-GI-Z]P) [1-9][0-9]{0,3}|[A-Z] [1-9][0-9]{0,3}|HP [1-9][0-9]{0,1})$/',
+        '/^WI (?:(?:[A-GI-Z][A-OQ-Z]|H[A-OQ-Z]|[A-GI-Z]P) [1-9][0-9]{0,3}|[A-Z] [1-9][0-9]{0,3}|HP [1-9][0-9]?)$/',
         '/^WI HP [1-9][0-9]{2,3}$/',
     ];
 
