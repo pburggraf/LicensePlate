@@ -64,9 +64,9 @@ abstract class AbstractDetector implements DetectorInterface
     public function normalize($licensePlate)
     {
         // remove dashes
-        $result = str_replace(array(
+        $result = str_replace([
             '-',
-        ), ' ', $licensePlate);
+        ], ' ', $licensePlate);
 
         // uppercase only
         $result = mb_strtoupper($result);

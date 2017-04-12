@@ -93,7 +93,7 @@ class PlateHbTest extends AbstractGermanyPlate
      * @param $type
      */
     public function testType($plate, $description, $type)
-     {
-         return parent::testType($plate, $description, $type);
+    {
+        return parent::testType($plate, $description, $type);
     }
 }

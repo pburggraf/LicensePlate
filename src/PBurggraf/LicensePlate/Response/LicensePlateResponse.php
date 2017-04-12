@@ -39,7 +39,7 @@ class LicensePlateResponse
     {
         $this->licensePlate = $licensePlate;
         $this->valid = false;
-        $this->details = array();
+        $this->details = [];
         $this->country = '';
         $this->type = 0;
     }
