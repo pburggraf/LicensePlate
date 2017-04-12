@@ -108,7 +108,7 @@ abstract class AbstractGermanyPlate
      */
     public function isValid()
     {
-        return $this->getIndex() !== false ? true : false;
+        return $this->getIndex() !== false;
     }
 
     /**

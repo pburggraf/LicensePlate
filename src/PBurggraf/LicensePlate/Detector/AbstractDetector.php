@@ -98,7 +98,7 @@ abstract class AbstractDetector implements DetectorInterface
         }
 
         $strlen = mb_strlen($string, $encoding);
-        $firstChar = mb_substr($string, 0, 1, $encoding);
+        $firstChar = $string[0];
         $then = mb_substr($string, 1, $strlen - 1, $encoding);
 
         return mb_strtoupper($firstChar, $encoding) . $then;

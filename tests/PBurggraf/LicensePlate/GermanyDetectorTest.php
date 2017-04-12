@@ -317,6 +317,10 @@ class GermanyDetectorTest extends \PHPUnit_Framework_TestCase
     ];
 
     /**
+     * @param $plate
+     * @param $validity
+     * @param $type
+     *
      * @dataProvider getDataProvider
      */
     public function testValidity($plate, $validity, $type)
@@ -330,6 +334,10 @@ class GermanyDetectorTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * @param $plate
+     * @param $validity
+     * @param $type
+     *
      * @dataProvider getDataProvider
      */
     public function testType($plate, $validity, $type)
