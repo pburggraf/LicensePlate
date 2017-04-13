@@ -29,74 +29,45 @@ class NetherlandsDetector extends AbstractDetector
      */
     public function parse()
     {
-        if (preg_match('/^[A-Z]{2} \d{2} \d{2}$/', $this->normalizedLicensePlate) === 1) {
-            $this->response->setValid(true);
-            $this->response->setType(self::PLATE_SIDECODE_1);
+        $sidecodes = [
+            self::PLATE_SIDECODE_1 => '/^[A-Z]{2} \d{2} \d{2}$/',
+            self::PLATE_SIDECODE_2 => '/^\d{2} \d{2} [A-Z]{2}$/',
+            self::PLATE_SIDECODE_3 => '/^\d{2} [A-Z]{2} \d{2}$/',
+            self::PLATE_SIDECODE_4 => '/^[A-Z]{2} \d{2} [A-Z]{2}$/',
+            self::PLATE_SIDECODE_5 => '/^[A-Z]{2} [A-Z]{2} \d{2}$/',
+            self::PLATE_SIDECODE_6 => '/^\d{2} [A-Z]{2} [A-Z]{2}$/',
+            self::PLATE_SIDECODE_7 => '/^\d{2} [A-Z]{3} \d$/',
+            self::PLATE_SIDECODE_8 => '/^\d [A-Z]{3} \d{2}$/',
+            self::PLATE_SIDECODE_9 => '/^[A-Z]{2} \d{3} [A-Z]$/',
+            self::PLATE_SIDECODE_10 => '/^[A-Z] \d{3} [A-Z]{2}$/',
+            self::PLATE_SIDECODE_11 => '/^[A-Z]{3} \d{2} [A-Z]$/',
+            self::PLATE_SIDECODE_12 => '/^[A-Z] \d{2} [A-Z]{3}$/',
+            self::PLATE_SIDECODE_13 => '/^\d [A-Z]{2} \d{3}$/',
+            self::PLATE_SIDECODE_14 => '/^\d{3} [A-Z]{2} \d$/',
+        ];
+
+        foreach ($sidecodes as $sidecode => $regex) {
+            $this->checkSidecode($regex, $sidecode);
+
+            if ($this->response->isValid()) {
+                return $this->response;
+            }
         }
 
-        if (preg_match('/^\d{2} \d{2} [A-Z]{2}$/', $this->normalizedLicensePlate) === 1) {
-            $this->response->setValid(true);
-            $this->response->setType(self::PLATE_SIDECODE_2);
-        }
+        return $this->response;
+    }
 
-        if (preg_match('/^\d{2} [A-Z]{2} \d{2}$/', $this->normalizedLicensePlate) === 1) {
+    /**
+     * @param $regex
+     * @param $resultSidecode
+     *
+     * @return LicensePlateResponse
+     */
+    public function checkSidecode($regex, $resultSidecode)
+    {
+        if (preg_match($regex, $this->normalizedLicensePlate) === 1) {
             $this->response->setValid(true);
-            $this->response->setType(self::PLATE_SIDECODE_3);
-        }
-
-        if (preg_match('/^[A-Z]{2} \d{2} [A-Z]{2}$/', $this->normalizedLicensePlate) === 1) {
-            $this->response->setValid(true);
-            $this->response->setType(self::PLATE_SIDECODE_4);
-        }
-
-        if (preg_match('/^[A-Z]{2} [A-Z]{2} \d{2}$/', $this->normalizedLicensePlate) === 1) {
-            $this->response->setValid(true);
-            $this->response->setType(self::PLATE_SIDECODE_5);
-        }
-
-        if (preg_match('/^\d{2} [A-Z]{2} [A-Z]{2}$/', $this->normalizedLicensePlate) === 1) {
-            $this->response->setValid(true);
-            $this->response->setType(self::PLATE_SIDECODE_6);
-        }
-
-        if (preg_match('/^\d{2} [A-Z]{3} \d$/', $this->normalizedLicensePlate) === 1) {
-            $this->response->setValid(true);
-            $this->response->setType(self::PLATE_SIDECODE_7);
-        }
-
-        if (preg_match('/^\d [A-Z]{3} \d{2}$/', $this->normalizedLicensePlate) === 1) {
-            $this->response->setValid(true);
-            $this->response->setType(self::PLATE_SIDECODE_8);
-        }
-
-        if (preg_match('/^[A-Z]{2} \d{3} [A-Z]$/', $this->normalizedLicensePlate) === 1) {
-            $this->response->setValid(true);
-            $this->response->setType(self::PLATE_SIDECODE_9);
-        }
-
-        if (preg_match('/^[A-Z] \d{3} [A-Z]{2}$/', $this->normalizedLicensePlate) === 1) {
-            $this->response->setValid(true);
-            $this->response->setType(self::PLATE_SIDECODE_10);
-        }
-
-        if (preg_match('/^[A-Z]{3} \d{2} [A-Z]$/', $this->normalizedLicensePlate) === 1) {
-            $this->response->setValid(true);
-            $this->response->setType(self::PLATE_SIDECODE_11);
-        }
-
-        if (preg_match('/^[A-Z] \d{2} [A-Z]{3}$/', $this->normalizedLicensePlate) === 1) {
-            $this->response->setValid(true);
-            $this->response->setType(self::PLATE_SIDECODE_12);
-        }
-
-        if (preg_match('/^\d [A-Z]{2} \d{3}$/', $this->normalizedLicensePlate) === 1) {
-            $this->response->setValid(true);
-            $this->response->setType(self::PLATE_SIDECODE_13);
-        }
-
-        if (preg_match('/^\d{3} [A-Z]{2} \d$/', $this->normalizedLicensePlate) === 1) {
-            $this->response->setValid(true);
-            $this->response->setType(self::PLATE_SIDECODE_14);
+            $this->response->setType($resultSidecode);
         }
 
         return $this->response;
