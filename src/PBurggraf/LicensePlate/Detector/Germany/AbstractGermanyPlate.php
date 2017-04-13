@@ -37,7 +37,7 @@ abstract class AbstractGermanyPlate
      * @var string[]
      */
     protected static $regexes = [
-        '/^(?:[A-ZÄÖÜ]{1,2} [A-Z]{1,2} [1-9][0-9]{0,3}[EH]?|[A-ZÄÖÜ]{3} (?:[A-Z] [1-9][0-9]{0,3}[EH]?|[A-Z]{2} [1-9][0-9]{0,2}[EH]?))$/',
+        '/^(?:[A-ZÄÖÜ]{1,2} [A-Z]{1,2} [1-9]\d{0,3}[EH]?|[A-ZÄÖÜ]{3} (?:[A-Z] [1-9]\d{0,3}[EH]?|[A-Z]{2} [1-9]\d{0,2}[EH]?))$/',
     ];
 
     /**
@@ -58,7 +58,7 @@ abstract class AbstractGermanyPlate
      * @var string[]
      */
     protected static $globalRegex = [
-        '/^[A-ZÄÖÜ]{1,2} 9[0-9]{2,4}$/',
+        '/^[A-ZÄÖÜ]{1,2} 9\d{2,4}$/',
     ];
 
     /**

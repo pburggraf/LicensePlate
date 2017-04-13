@@ -22,9 +22,9 @@ class PlateEbs extends AbstractGermanyPlate
      * @var string[]
      */
     protected static $regexes = [
-        '/^EBS [A-M] [1-9][0-9]{0,2}$/',
-        '/^EBS [N-Z] [1-9][0-9]{0,2}$/',
-        '/^EBS (?:[A-Z] [1-9][0-9]{3}|[A-Z]{2} [1-9][0-9]{0,3})$/',
+        '/^EBS [A-M] [1-9]\d{0,2}$/',
+        '/^EBS [N-Z] [1-9]\d{0,2}$/',
+        '/^EBS (?:[A-Z] [1-9]\d{3}|[A-Z]{2} [1-9]\d{0,3})$/',
     ];
 
     /**

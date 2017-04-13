@@ -22,9 +22,9 @@ class PlateR extends AbstractGermanyPlate
      * @var string[]
      */
     protected static $regexes = [
-        '/^R (?:[A-OQ-Z][A-OQS-Z] [1-9][0-9]{0,2}|(?:[M-OQ-Z][NOQS-Z]|[A-L][A-M]|PP|PR) [1-9][0-9]{3}|(?:PP|PR) [1-9][0-9]?)$/',
-        '/^R [A-Z] [1-9][0-9]{0,3}$/',
-        '/^R (?:PP|PR) [1-9][0-9]{2}$/',
+        '/^R (?:[A-OQ-Z][A-OQS-Z] [1-9]\d{0,2}|(?:[M-OQ-Z][NOQS-Z]|[A-L][A-M]|PP|PR) [1-9]\d{3}|(?:PP|PR) [1-9]\d?)$/',
+        '/^R [A-Z] [1-9]\d{0,3}$/',
+        '/^R (?:PP|PR) [1-9]\d{2}$/',
     ];
 
     /**

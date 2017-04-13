@@ -20,7 +20,7 @@ class PlateSh extends AbstractGermanyPlate
      * @var string[]
      */
     protected static $regexes = [
-        '/^SH (?:[0-9]{1,4} [0-9]{1,4}|[0-9]{1,6})[A-Z]?$/',
+        '/^SH (?:\d{1,4} \d{1,4}|\d{1,6})[A-Z]?$/',
     ];
 
     /**

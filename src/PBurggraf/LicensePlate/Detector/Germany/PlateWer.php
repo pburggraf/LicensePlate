@@ -21,8 +21,8 @@ class PlateWer extends AbstractGermanyPlate
      * @var string[]
      */
     protected static $regexes = [
-        '/^WER (?:Y[A-Z] [1-9][0-9]{0,2}|[A-Z] [7-9][0-9]{3})$/',
-        '/^WER (?:[A-XZ][A-Z] [1-9][0-9]{0,3}|Y[A-Z] [1-9][0-9]{3}|[A-Z] (?:[1-6][0-9]{3}|[1-9][0-9]{0,2}))$/',
+        '/^WER (?:Y[A-Z] [1-9]\d{0,2}|[A-Z] [7-9]\d{3})$/',
+        '/^WER (?:[A-XZ][A-Z] [1-9]\d{0,3}|Y[A-Z] [1-9]\d{3}|[A-Z] (?:[1-6]\d{3}|[1-9]\d{0,2}))$/',
     ];
 
     /**

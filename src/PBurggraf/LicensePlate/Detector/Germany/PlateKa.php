@@ -21,8 +21,8 @@ class PlateKa extends AbstractGermanyPlate
      * @var string[]
      */
     protected static $regexes = [
-        '/^KA (?:[A-Z]{2} [1-9][0-9]{2}|[N-Z][A-Z] [1-9][0-9]{3})$/',
-        '/^KA (?:[A-Z] [1-9][0-9]{0,3}|[A-Z]{2} [1-9][0-9]?|[A-M][A-Z] [1-9][0-9]{3})$/',
+        '/^KA (?:[A-Z]{2} [1-9]\d{2}|[N-Z][A-Z] [1-9]\d{3})$/',
+        '/^KA (?:[A-Z] [1-9]\d{0,3}|[A-Z]{2} [1-9]\d?|[A-M][A-Z] [1-9]\d{3})$/',
     ];
 
     /**

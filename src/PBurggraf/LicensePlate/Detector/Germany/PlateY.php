@@ -20,7 +20,7 @@ class PlateY extends AbstractGermanyPlate
      * @var string[]
      */
     protected static $regexes = [
-        '/^Y (?:[0-9]{1,4} [0-9]{1,4}|[0-9]{1,6})[A-Z]?$/',
+        '/^Y (?:\d{1,4} \d{1,4}|\d{1,6})[A-Z]?$/',
     ];
 
     /**

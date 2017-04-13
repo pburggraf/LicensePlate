@@ -20,7 +20,7 @@ class PlateLsn extends AbstractGermanyPlate
      * @var string[]
      */
     protected static $regexes = [
-        '/^LSN (?:[0-9]{1,4} [0-9]{1,4}|[0-9]{1,6})[A-Z]?$/',
+        '/^LSN (?:\d{1,4} \d{1,4}|\d{1,6})[A-Z]?$/',
     ];
 
     /**

@@ -21,8 +21,8 @@ class PlateMz extends AbstractGermanyPlate
      * @var string[]
      */
     protected static $regexes = [
-        '/^MZ (?:[A-Z]{2} [1-9][0-9]{2}|(?:[A-J][A-Z]|K[A-Y]) [1-9][0-9]{3})$/',
-        '/^MZ (?:[A-Z]{2} [1-9][0-9]?|[A-Z] [1-9][0-9]{0,3}|(?:[L-Z][A-Z]|KZ) [1-9][0-9]{3})$/',
+        '/^MZ (?:[A-Z]{2} [1-9]\d{2}|(?:[A-J][A-Z]|K[A-Y]) [1-9]\d{3})$/',
+        '/^MZ (?:[A-Z]{2} [1-9]\d?|[A-Z] [1-9]\d{0,3}|(?:[L-Z][A-Z]|KZ) [1-9]\d{3})$/',
     ];
 
     /**

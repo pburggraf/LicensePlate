@@ -21,8 +21,8 @@ class PlatePa extends AbstractGermanyPlate
      * @var string[]
      */
     protected static $regexes = [
-        '/^PA [A-Z] [1-9][0-9]{0,3}$/',
-        '/^PA [A-Z]{2} [1-9][0-9]{0,3}$/',
+        '/^PA [A-Z] [1-9]\d{0,3}$/',
+        '/^PA [A-Z]{2} [1-9]\d{0,3}$/',
     ];
 
     /**

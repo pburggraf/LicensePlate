@@ -21,8 +21,8 @@ class PlateVib extends AbstractGermanyPlate
      * @var string[]
      */
     protected static $regexes = [
-        '/^VIB (?:[A-Z]{2} [1-9][0-9]{0,3}|[AC-HJ-NPR-Z] [1-9][0-9]{0,3}|[BIOQ] [1-9](?:[0-9]?|[0-9]{3}))$/',
-        '/^VIB [BIOQ] [1-9][0-9]{2}$/',
+        '/^VIB (?:[A-Z]{2} [1-9]\d{0,3}|[AC-HJ-NPR-Z] [1-9]\d{0,3}|[BIOQ] [1-9](?:\d?|\d{3}))$/',
+        '/^VIB [BIOQ] [1-9]\d{2}$/',
     ];
 
     /**

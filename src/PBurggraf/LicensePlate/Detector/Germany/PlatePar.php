@@ -21,8 +21,8 @@ class PlatePar extends AbstractGermanyPlate
      * @var string[]
      */
     protected static $regexes = [
-        '/^PAR (?:[QY]|BB|CC) [1-9][0-9]{0,2}$/',
-        '/^PAR (?:(?:[A-PR-XZ]|[AD-Z]{2}) [1-9][0-9]{0,3}|(?:[QY]|BB|CC) [1-9][0-9]{3})$/',
+        '/^PAR (?:[QY]|BB|CC) [1-9]\d{0,2}$/',
+        '/^PAR (?:(?:[A-PR-XZ]|[AD-Z]{2}) [1-9]\d{0,3}|(?:[QY]|BB|CC) [1-9]\d{3})$/',
     ];
 
     /**

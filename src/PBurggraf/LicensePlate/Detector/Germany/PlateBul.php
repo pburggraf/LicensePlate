@@ -21,8 +21,8 @@ class PlateBul extends AbstractGermanyPlate
      * @var string[]
      */
     protected static $regexes = [
-        '/^BUL (?:[A-Z]{2} [1-9][0-9]{0,3}|[AC-EH-Z] [1-9][0-9]{0,3}|[BFG] [1-9][0-9]{3})$/',
-        '/^BUL [BFG] [1-9][0-9]{0,2}$/',
+        '/^BUL (?:[A-Z]{2} [1-9]\d{0,3}|[AC-EH-Z] [1-9]\d{0,3}|[BFG] [1-9]\d{3})$/',
+        '/^BUL [BFG] [1-9]\d{0,2}$/',
     ];
 
     /**

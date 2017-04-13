@@ -22,9 +22,9 @@ class PlateOs extends AbstractGermanyPlate
      * @var string[]
      */
     protected static $regexes = [
-        '/^OS [A-Z] [1-9][0-9]{0,3}$/',
-        '/^OS (?:[A-OQ-Z][A-CE-Z] [1-9][0-9]{0,3}|PD [1-9](?:[0-9]?|[0-9]{3}))$/',
-        '/^OS PD [1-9][0-9]{2}$/',
+        '/^OS [A-Z] [1-9]\d{0,3}$/',
+        '/^OS (?:[A-OQ-Z][A-CE-Z] [1-9]\d{0,3}|PD [1-9](?:\d?|\d{3}))$/',
+        '/^OS PD [1-9]\d{2}$/',
     ];
 
     /**

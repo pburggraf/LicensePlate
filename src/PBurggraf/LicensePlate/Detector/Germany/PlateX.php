@@ -20,7 +20,7 @@ class PlateX extends AbstractGermanyPlate
      * @var string[]
      */
     protected static $regexes = [
-        '/^X [1-9][0-9]{3}$/',
+        '/^X [1-9]\d{3}$/',
     ];
 
     /**

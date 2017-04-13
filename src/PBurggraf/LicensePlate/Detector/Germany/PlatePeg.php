@@ -23,10 +23,10 @@ class PlatePeg extends AbstractGermanyPlate
      * @var string[]
      */
     protected static $regexes = [
-        '/^PEG [B-Z] [1-9][0-9]{0,2}$/',
-        '/^PEG [A-Z] [1-9][0-9]{3}$/',
-        '/^PEG A [1-9][0-9]{0,2}$/',
-        '/^PEG [A-Z]{2} [1-9][0-9]{0,3}$/',
+        '/^PEG [B-Z] [1-9]\d{0,2}$/',
+        '/^PEG [A-Z] [1-9]\d{3}$/',
+        '/^PEG A [1-9]\d{0,2}$/',
+        '/^PEG [A-Z]{2} [1-9]\d{0,3}$/',
     ];
 
     /**

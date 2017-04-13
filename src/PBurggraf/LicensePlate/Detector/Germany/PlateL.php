@@ -21,8 +21,8 @@ class PlateL extends AbstractGermanyPlate
      * @var string[]
      */
     protected static $regexes = [
-        '/^L [A-T][A_Z]? [1-9][0-9]{0,3}[EH]?$/',
-        '/^L [U-Z][A-Z]? [1-9][0-9]{0,3}[EH]?$/',
+        '/^L [A-T][A_Z]? [1-9]\d{0,3}[EH]?$/',
+        '/^L [U-Z][A-Z]? [1-9]\d{0,3}[EH]?$/',
     ];
 
     /**

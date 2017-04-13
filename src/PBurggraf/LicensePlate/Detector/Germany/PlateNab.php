@@ -21,8 +21,8 @@ class PlateNab extends AbstractGermanyPlate
      * @var string[]
      */
     protected static $regexes = [
-        '/^NAB [BFG] [1-9][0-9]{0,2}$/',
-        '/^NAB (?:[A-Z]{2} [1-9][0-9]{0,3}|[A-Z] [1-9][0-9]{3}|[AC-EH-Z] [1-9][0-9]{0,2})$/',
+        '/^NAB [BFG] [1-9]\d{0,2}$/',
+        '/^NAB (?:[A-Z]{2} [1-9]\d{0,3}|[A-Z] [1-9]\d{3}|[AC-EH-Z] [1-9]\d{0,2})$/',
     ];
 
     /**

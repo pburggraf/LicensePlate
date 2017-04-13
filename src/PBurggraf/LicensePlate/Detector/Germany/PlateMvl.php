@@ -20,7 +20,7 @@ class PlateMvl extends AbstractGermanyPlate
      * @var string[]
      */
     protected static $regexes = [
-        '/^MVL (?:[0-9]{1,4} [0-9]{1,4}|[0-9]{1,6})[A-Z]?$/',
+        '/^MVL (?:\d{1,4} \d{1,4}|\d{1,6})[A-Z]?$/',
     ];
 
     /**

@@ -20,7 +20,7 @@ class PlateBd extends AbstractGermanyPlate
      * @var string[]
      */
     protected static $regexes = [
-        '/^BD (?:[0-9]{1,4} [0-9]{1,4}|[0-9]{1,6})[A-Z]?$/',
+        '/^BD (?:\d{1,4} \d{1,4}|\d{1,6})[A-Z]?$/',
     ];
 
     /**

@@ -21,8 +21,8 @@ class PlateHh extends AbstractGermanyPlate
      * @var string[]
      */
     protected static $regexes = [
-        '/^HH [A-Z]{1,2} [1-9][0-9]{0,3}[EH]?$/',
-        '/^HH (?:[0-9]{1,4} [0-9]{1,4}|[0-9]{1,6})[A-Z]?$/',
+        '/^HH [A-Z]{1,2} [1-9]\d{0,3}[EH]?$/',
+        '/^HH (?:\d{1,4} \d{1,4}|\d{1,6})[A-Z]?$/',
     ];
 
     /**

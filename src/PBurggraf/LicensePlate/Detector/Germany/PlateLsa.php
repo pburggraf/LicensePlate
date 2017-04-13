@@ -20,7 +20,7 @@ class PlateLsa extends AbstractGermanyPlate
      * @var string[]
      */
     protected static $regexes = [
-        '/^LSA (?:[0-9]{1,4} [0-9]{1,4}|[0-9]{1,6})[A-Z]?$/',
+        '/^LSA (?:\d{1,4} \d{1,4}|\d{1,6})[A-Z]?$/',
     ];
 
     /**

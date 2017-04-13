@@ -23,10 +23,10 @@ class PlateEsb extends AbstractGermanyPlate
      * @var string[]
      */
     protected static $regexes = [
-        '/^ESB (?:[BFGIOQ] [1-9][0-9]{3}|[A-Z][A-SU-Z] [1-9][0-9]{0,3}|[A-Z]T [1-9][0-9]{2,3}|[AC-EHJ-MPR-Z] [1-9][0-9]{0,3}|N [1-9][0-9]{3})$/',
-        '/^ESB [BFGIOQ] [1-9][0-9]{0,2}$/',
-        '/^ESB [A-Z]T [1-9][0-9]?$/',
-        '/^ESB N [1-9][0-9]{0,2}$/',
+        '/^ESB (?:[BFGIOQ] [1-9]\d{3}|[A-Z][A-SU-Z] [1-9]\d{0,3}|[A-Z]T [1-9]\d{2,3}|[AC-EHJ-MPR-Z] [1-9]\d{0,3}|N [1-9]\d{3})$/',
+        '/^ESB [BFGIOQ] [1-9]\d{0,2}$/',
+        '/^ESB [A-Z]T [1-9]\d?$/',
+        '/^ESB N [1-9]\d{0,2}$/',
     ];
 
     /**
