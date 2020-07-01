@@ -3,7 +3,6 @@
 namespace PBurggraf\LicensePlate\Test\Detector\Germany;
 
 use PBurggraf\LicensePlate\Detector\GermanyDetector;
-use PBurggraf\LicensePlate\LicensePlateFactory;
 
 /**
  * @author Philip Burggraf <philip@pburggraf.de>

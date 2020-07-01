@@ -3,7 +3,6 @@
 namespace PBurggraf\LicensePlate\Detector\Germany;
 
 use PBurggraf\LicensePlate\Detector\GermanyDetector;
-use PBurggraf\LicensePlate\LicensePlateFactory;
 use PBurggraf\LicensePlate\Test\Detector\Germany\AbstractGermanyPlate;
 
 /**

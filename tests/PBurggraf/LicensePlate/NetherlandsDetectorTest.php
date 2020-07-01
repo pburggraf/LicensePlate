@@ -2,10 +2,11 @@
 
 namespace PBurggraf\LicensePlate\Test\Detector;
 
+use PHPUnit\Framework\TestCase;
 use PBurggraf\LicensePlate\Detector\NetherlandsDetector;
 use PBurggraf\LicensePlate\LicensePlateFactory;
 
-class NetherlandsDetectorTest extends \PHPUnit_Framework_TestCase
+class NetherlandsDetectorTest extends TestCase
 {
     protected static $plateTests = [
         [

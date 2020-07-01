@@ -2,13 +2,14 @@
 
 namespace PBurggraf\LicensePlate\Test\Detector;
 
+use PHPUnit\Framework\TestCase;
 use PBurggraf\LicensePlate\Detector\GermanyDetector;
 use PBurggraf\LicensePlate\LicensePlateFactory;
 
 /**
  * @author Philip Burggraf <philip@pburggraf.de>
  */
-class GermanyDetectorTest extends \PHPUnit_Framework_TestCase
+class GermanyDetectorTest extends TestCase
 {
     protected static $plateTests = [
         [
@@ -331,6 +332,8 @@ class GermanyDetectorTest extends \PHPUnit_Framework_TestCase
             $result = $validationResult->isValid();
             $this->assertEquals($validity, $result, sprintf('Tested plate: \'%s\', should be %s', $plate, (bool)$validity));
         }
+
+        $this->assertGreaterThanOrEqual(0, count($validationResults));
     }
 
     /**
@@ -348,6 +351,8 @@ class GermanyDetectorTest extends \PHPUnit_Framework_TestCase
             $result = $typeResult->getType();
             $this->assertEquals($type, $result, sprintf('Tested plate: \'%s\', should be %s', $plate, $type));
         }
+
+        $this->assertGreaterThanOrEqual(0, count($typeResults));
     }
 
     /**
