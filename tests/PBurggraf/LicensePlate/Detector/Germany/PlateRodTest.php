@@ -3,7 +3,6 @@
 namespace PBurggraf\LicensePlate\Detector\Germany;
 
 use PBurggraf\LicensePlate\Detector\GermanyDetector;
-use PBurggraf\LicensePlate\LicensePlateFactory;
 use PBurggraf\LicensePlate\Test\Detector\Germany\AbstractGermanyPlate;
 
 /**
@@ -129,7 +128,7 @@ class PlateRodTest extends AbstractGermanyPlate
             ],
             'type' => GermanyDetector::PLATE_TYPE_DEFAULT,
         ],
-        
+
         [
             'plate' => 'ROD G 1',
             'description' => [
@@ -215,7 +214,7 @@ class PlateRodTest extends AbstractGermanyPlate
             ],
             'type' => GermanyDetector::PLATE_TYPE_DEFAULT,
         ],
-        
+
         [
             'plate' => 'ROD AA 1',
             'description' => [

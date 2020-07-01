@@ -2,13 +2,14 @@
 
 namespace PBurggraf\LicensePlate\Test\Detector\Germany;
 
+use PHPUnit\Framework\TestCase;
 use PBurggraf\LicensePlate\Detector\GermanyDetector;
 use PBurggraf\LicensePlate\LicensePlateFactory;
 
 /**
  * @author Philip Burggraf <philip@pburggraf.de>
  */
-abstract class AbstractGermanyPlate extends \PHPUnit_Framework_TestCase
+abstract class AbstractGermanyPlate extends TestCase
 {
     /**
      * @var array
